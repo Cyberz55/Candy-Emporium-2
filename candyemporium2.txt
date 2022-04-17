@@ -59,7 +59,7 @@ Buildings
         
     *autoclick
         name:Auto Clicker
-        desc:<//><b>Base Effect:</b><.>Produces 25 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[autoclick:ps]</b> coins every second.<//><q>Clicks candy for you.</q>
+        desc:<//><b>Base Effect:</b><.>Produces 25 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[autoclickp:ps]</b> coins every second.<//><q>Clicks candy for you.</q>
 				cost:400 candy
 				on tick:yield 25 candy
 				on tick:yield 25 autoclickp
