@@ -60,8 +60,8 @@ Buildings
     *autoclick
         name:Auto Clicker
         desc:<//><b>Base Effect:</b><.>Produces 25 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[autoclickp:ps]</b> coins every second.<//><q>Clicks candy for you.</q>
-				cost:400 candy
-				on tick:yield 25 candy
+	      cost:400 candy
+        on tick:yield 25 candy
 				on tick:yield 25 autoclickp
 				icon:
 				unlocked
@@ -69,6 +69,22 @@ Buildings
 Upgrades
     *TEMPLATE
         on click:anim glow
+        
+    *autoclick1
+        name:Accelerated Tapping
+        desc:Clicking and Autoclickers are <b>+50%</b> as efficient.<//><q>Aww yeah, let's get this started!</q>
+        cost:4000 candy
+        passive:multiply yield of click by 1.5
+        passive:multiply yield of autoclick by 1.5
+        req:1 autoclick
+        
+    *autoclick2
+        name:Steel Gloss Protection
+        desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>Some added protection with the advantage of not looking so rusty.</q>
+        cost:20000 candy
+        passive:multiply yield of click by 2
+        passive:multiply yield of autoclick by 2
+        req:10 autoclick
 				
 Achievements
     *TEMPLATE
