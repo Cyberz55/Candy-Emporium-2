@@ -182,7 +182,7 @@ Upgrades
         name:Cloning Pods
         desc:Clicking and Autoclickers are <b>5 times</b> as efficient.<//><q>By extracting the code of the original autoclicker, I am now able to manifest millions of autoclickers! I wonder if the same can be done for those workers.</q>
         cost:200000000000 candy
-        pasisve:multiply yield of click by 5
+        passive:multiply yield of click by 5
         passive:multiply yield of autoclick by 5
         req:125 autoclick
         
