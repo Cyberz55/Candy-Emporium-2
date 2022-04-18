@@ -123,7 +123,7 @@ Upgrades
         name:Digitalized Finding Units
         desc:Autoclickers are <b>2.8%</b> more efficient per Cave. Caves are <b>+50%</b> more efficient.<//><q>What?? You're saying they've already been invented?! Whatever, I'm gonna implement them in my autoclickers instead!</q>
         cost:1000 toxic
-        passive:multiply yield of autoclicker by (1+((cave)*0.028))
+        passive:multiply yield of autoclick by (1+((cave)*0.028))
         passive:multiply yield of cave by 1.5
         req:1 cave
         
