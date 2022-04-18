@@ -110,7 +110,7 @@ Buildings
         on tick:yield 36000 candy
         on tick:yield 36000 cavep
         on tick:yield 0.036 toxic
-        req:237000 candy:earned
+        req:unlockbuild1
         				
 Upgrades
     *TEMPLATE
