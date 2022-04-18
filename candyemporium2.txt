@@ -106,16 +106,34 @@ Buildings
         
     *cave
         name:Caves
-        desc:<//><b>Base Effect:</b><.>Produces 36000 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[cavep:ps]</b> candy every second.<//><q>Deep caves to explore and mine candy.</q>
+        desc:<//><b>Base Effect:</b><.>Produces 36000 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[cavep:ps]</b> candy every second.<//>Unlocks new buildings and special upgrades over time.<//><q>Deep caves to explore, what new things can we discover?</q>
         cost:474000 candy
         on tick:yield 36000 candy
         on tick:yield 36000 cavep
-        on tick:yield 0.036 toxic
+        on tick:yield 0.0036 toxic
         req:unlockbuild1
         				
 Upgrades
     *TEMPLATE
         on click:anim glow
+        
+    //Special upgrades
+    
+    *special1
+        name:Digitalized Finding Units
+        desc:Autoclickers are <b>2.8%</b> more efficient per Cave. Caves are <b>+50%</b> more efficient.<//><q>What?? You're saying they've already been invented?! Whatever, I'm gonna implement them in my autoclickers instead!</q>
+        cost:1000 toxic
+        passive:multiply yield of autoclicker by (1+((cave)*0.028))
+        passive:multiply yield of cave by 1.5
+        req:1 cave
+        
+    *special2
+        name:The Sound of Destroying
+        desc:Vending Machines are <b>2.5%</b> more efficient per Cave. Caves are <b>twice</b> as efficient.<//><q>Destroy, build, destroy.</q>
+        cost:23700000 candy
+        passive:multiply yield of machine by (1+((cave)*0.025))
+        passive:multiply yield of cave by 2
+        req:10 cave
         
     //Unlock building upgrades
     
@@ -187,7 +205,14 @@ Upgrades
         desc:Clicking is <b>1.5%</b> more efficient per Vending Machine.<//><q>A bit rude, but it sure gets the job done.</q>
         cost:650000000 candy
         passive:multiply yield of click by (1+((machine)*0.015))
-        req:40 machine and 424242424 candy:earned 
+        req:40 machine and 424242424 candy:earned
+        
+     *clicksynergy2
+        name:Mouse and Moles
+        desc:Clicking is <b>1.45%</b> more efficient per Cave.<//><q>It's the beginning of the everlasting rivalry. To this day, we don't know which one is more superior...</q>
+        cost:1500 toxic
+        passive:multiply yield of click by (1+((cave)*0.0145))
+        req:40 cave and 4242424242 candy:earned
         
     //Autoclicker upgrades
         
@@ -297,7 +322,16 @@ Upgrades
         cost:6.5e15 candy //6.5 quadrillion
         passive:multiply yield of machine by 10
         req:175 machine
-				
+        
+    //Cave upgrades
+    
+    *cave1
+        name:The Haven of Minerals
+        desc:Caves are <b>twice</b> as efficient.<//><q>One swing of the fructose pickaxe, a fountain of minerals pours out of the hole as I step back to get a broader look. A genius idea arises in my head. Soon after, all the autoclickers managed to convert these into candy.</q>
+        cost:237000000 candy
+        passive:multiply yield of cave by 2
+        req:20 cave
+
 Achievements
     *TEMPLATE
         on click:anim glow
