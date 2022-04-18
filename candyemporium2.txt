@@ -259,7 +259,7 @@ Upgrades
     *autoclick6
         name:Cloning Pods
         desc:Clicking and Autoclickers are <b>5 times</b> as efficient.<//><q>By extracting the code of the original autoclicker, I am now able to manifest millions of autoclickers! I wonder if the same can be done for those workers.</q>
-        cost:200000000000 candy
+        cost:20000000000 candy
         passive:multiply yield of click by 5
         passive:multiply yield of autoclick by 5
         req:125 autoclick
@@ -305,7 +305,7 @@ Upgrades
     *machine5
         name:Infinite Candy Generation
         desc:Vending Machines are <b>4 times</b> as efficient.<//><q>DISPENSING CANDY FOREVER AND FOREVER A HUNDRED YEARS!</q>
-        cost:65000000000 candy
+        cost:6500000000 candy
         passive:multiply yield of machine by 4
         req:80 machine
         
