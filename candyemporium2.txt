@@ -36,6 +36,14 @@ Resources
         show earned
         icon:
         
+    *toxic
+         name:toxic candy
+         desc:You can spend these on stuff
+         class:noBackground
+         show earned
+         hidden when 0
+         icon:
+        
     *autoclickp
         name:Auto Clicker Yield
         desc:How much auto clickers make every second.
@@ -46,6 +54,12 @@ Resources
         name:Vending Machine Yield
         desc:How much vending machines make every second.
         text:[machinep:ps] candy/s
+        always hidden
+        
+    *cavep
+        name:Cave Yield
+        desc:How much caves make every second.
+        text:[cavep:ps] candy/s
         always hidden
         
     *time
@@ -62,6 +76,15 @@ Buildings
         on tick:yield 1 time
         always hidden
         
+    *winunlock1
+        name:Invest in the Caves of Candy
+        desc:Rewards you with <b>something interesting</b>
+        cost:100000000 candy
+        on earn:yield 10 toxic
+        on earn:yield 1000000000 candy
+        on earn:lose unlock1
+        req:250000000 candy:earned
+    
     *autoclick
         name:Auto Clickers
         desc:<//><b>Base Effect:</b><.>Produces 25 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[autoclickp:ps]</b> candy every second.<//><q>Clicks candy for you.</q>
@@ -80,10 +103,29 @@ Buildings
         req:6500 candy:earned
         icon:
         
-				
+    *cave
+        name:Caves
+        desc:<//><b>Base Effect:</b><.>Produces 36000 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[cavep:ps]</b> candy every second.<//><q>Deep caves to explore and mine candy.</q>
+        cost:474000 candy
+        on tick:yield 36000 candy
+        on tick:yield 36000 cavep
+        on tick:yield 0.036 toxic
+        req:237000 candy:earned
+        				
 Upgrades
     *TEMPLATE
         on click:anim glow
+        
+    //Unlock building upgrades
+    
+    *unlockbuild1
+        name:Fructose Pickaxe
+        desc:Everything up to Vending Machines are <b>twice</b> as efficient<.>Clicking is also <b>twice</b> as efficient<.>Unlocks something <b>dark and deep.</b><//><q>This sure is spooky, at least I have this delicious pickaxe with me.</q>
+        passive:multiply yield of autoclick by 2
+        passive:multiply yield of click by 2
+        passive:multiply yield of machine by 2
+        cost:5 toxic
+        req:10 toxic:earned
         
     //Manual clicking upgrades
     
@@ -135,6 +177,15 @@ Upgrades
         cost:424242424242 candy
         passive:multiply yield of click by 2
         req:42424242424 candy:earned
+        
+     //Clicking synergy upgrades
+     
+     *clicksynergy1
+        name:Synchronous Shoving
+        desc:Clicking is <b>1.5%</b> more efficient per Vending Machine.<//><q>A bit rude, but it sure gets the job done.</q>
+        cost:650000000 candy
+        passive:multiply yield of click by (1+((machine)*0.015))
+        req:40 machine and 424242424 candy:earned 
         
     //Autoclicker upgrades
         
@@ -223,6 +274,27 @@ Upgrades
         cost:650000000 candy
         passive:multiply yield of machine by 3
         req:40 machine
+        
+    *machine5
+        name:Infinite Candy Generation
+        desc:Vending Machines are <b>4 times</b> as efficient.<//><q>DISPENSING CANDY FOREVER AND FOREVER A HUNDRED YEARS!</q>
+        cost:65000000000 candy
+        passive:multiply yield of machine by 4
+        req:80 machine
+        
+    *machine6
+        name:Virtual Vending
+        desc:Vending Machines are <b>5 times</b> as efficient.<//><q>The thought of using vending machines virtually and realistically has become a reality, although we haven't tested any possibilities of insanity or catastrophic calamity.</q>
+        cost:6500000000000 candy
+        passive:multiply yield of machine by 5
+        req:125 machine
+        
+    *machine7
+        name:Venting Machines
+        desc:Vending Machines are <b>10 times</b> as efficient.<//><q>Take out all your fustration on vending machines by shaking it vigoriously until it drops every last candy out of the slot. Delectable and diabolical.</q>
+        cost:6.5e15 candy //6.5 quadrillion
+        passive:multiply yield of machine by 10
+        req:175 machine
 				
 Achievements
     *TEMPLATE
