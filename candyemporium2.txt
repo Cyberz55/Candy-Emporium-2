@@ -41,7 +41,12 @@ Resources
         desc:How much auto clickers make every second.
         text:[autoclickp:ps] candy/s
         always hidden
-        icon:
+        
+    *machinep
+        name:Vending Machine Yield
+        desc:How much vending machines make every second.
+        text:[machinep:ps] candy/s
+        always hidden
         
     *time
         name:Seconds
@@ -58,21 +63,84 @@ Buildings
         always hidden
         
     *autoclick
-        name:Auto Clicker
-        desc:<//><b>Base Effect:</b><.>Produces 25 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[autoclickp:ps]</b> coins every second.<//><q>Clicks candy for you.</q>
+        name:Auto Clickers
+        desc:<//><b>Base Effect:</b><.>Produces 25 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[autoclickp:ps]</b> candy every second.<//><q>Clicks candy for you.</q>
 	      cost:400 candy
         on tick:yield 25 candy
 				on tick:yield 25 autoclickp
 				icon:
 				unlocked
+        
+    *machine
+        name:Vending Machines
+        desc:<//><b>Base Effect:</b><.>Produces 1100 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[machinep:ps]</b> candy every second.<//><q>Dispenses a variety of candy for you.</q>
+        cost:13000 candy
+        on tick:yield 1100 candy
+        on tick:yield 1100 machinep
+        req:6500 candy:earned
+        icon:
+        
 				
 Upgrades
     *TEMPLATE
         on click:anim glow
         
+    //Manual clicking upgrades
+    
+    *click1
+        name:Candy Click
+        desc:Clicking is <b>5 times</b> as efficient.<//><q>Ha! Avoided a copyright strike, take that Candy Crush- dangnabbit!</q>
+        cost:42424 candy
+        passive:multiply yield of click by 5
+        req:4242 candy:earned
+        
+    *click2
+        name:Dual Processing
+        desc:Clicking is <b>10 times</b> as efficient.<//><q>Double the trouble.</q>
+        cost:424242 candy
+        passive:multiply yield of click by 10
+        req:42424 candy:earned
+        
+    *click3
+        name:Triple Processing
+        desc:Clicking is <b>15 times</b> as efficient.<//><q>Triple the trouble.</q>
+        cost:4242424 candy
+        passive:multiply yield of click by 15
+        req:424242 candy:earned
+        
+    *click4
+        name:Quadruple Processing
+        desc:Clicking is <b>twice</b> as efficient.<//><q>Quadruple the trouble.</q>
+        cost:42424242 candy
+        passive:multiply yield of click by 2
+        req:4242424 candy:earned
+        
+    *click5
+        name:Quintuple Processing
+        desc:Clicking is <b>twice</b> as efficient.<//><q>Quintuple the trouble.</q>
+        cost:424242424 candy
+        passive:multiply yield of click by 2
+        req:42424242 candy:earned
+        
+    *click6
+        name:Sextuple Processing
+        desc:Clicking is <b>twice</b> as efficient.<//><q>No joke, I actually had to search up what comes after all this and to my suprise it just follows the quadrillion, quintillion, sextillion pattern. Makes sense in retrospect.</q>
+        cost:4242424242 candy
+        passive:multiply yield of click by 2
+        req:424242424 candy:earned
+        
+    *click7
+        name:Septuple Processing
+        desc:Clicking is <b>twice</b> as efficient.<//><q>Septuple the trouble.</q>
+        cost:424242424242 candy
+        passive:multiply yield of click by 2
+        req:42424242424 candy:earned
+        
+    //Autoclicker upgrades
+        
     *autoclick1
         name:Accelerated Tapping
-        desc:Clicking and Autoclickers are <b>+50%</b> as efficient.<//><q>Aww yeah, let's get this started!</q>
+        desc:Clicking and Autoclickers are <b>+50%</b> more efficient.<//><q>Aww yeah, let's get this started!</q>
         cost:4000 candy
         passive:multiply yield of click by 1.5
         passive:multiply yield of autoclick by 1.5
@@ -80,11 +148,81 @@ Upgrades
         
     *autoclick2
         name:Steel Gloss Protection
-        desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>Some added protection with the advantage of not looking so rusty.</q>
+        desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>It's like looking at the sun.</q>
         cost:20000 candy
         passive:multiply yield of click by 2
         passive:multiply yield of autoclick by 2
         req:10 autoclick
+        
+    *autoclick3
+        name:Unobtanium Batteries
+        desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>Forged by mysterious workers so distrubingly close to the magma layer, they have somehow managed to obtain something you would only dream of getting in the first place.</q>
+        cost:200000 candy
+        passive:multiply yield of click by 2
+        passive:multiply yield of autoclick by 2
+        req:20 autoclick
+        
+    *autoclick4
+        name:Nitro Hyperdrive
+        desc:Clicking and Autoclickers are <b>3 times</b> as efficient.<//><q>GOTTA CLICK FAST!</q>
+        cost:20000000 candy
+        passive:multiply yield of click by 3
+        passive:multiply yield of autoclick by 3
+        req:40 autoclick
+        
+    *autoclick5
+        name:Cursor Rituals
+        desc:Clicking and Autoclickers are <b>4 times</b> as efficient.<//><q>Ancient legend says that when a team of autoclickers perform the sacred ritual, shall recieve ultimate power. It's very strange to watch though, I suggest to look away.</q>
+        cost:2000000000 candy
+        passive:multiply yield of click by 4
+        passive:multiply yield of autoclick by 4
+        req:80 autoclick
+        
+    *autoclick6
+        name:Cloning Pods
+        desc:Clicking and Autoclickers are <b>5 times</b> as efficient.<//><q>By extracting the code of the original autoclicker, I am now able to manifest millions of autoclickers! I wonder if the same can be done for those workers.</q>
+        cost:200000000000 candy
+        pasisve:multiply yield of click by 5
+        passive:multiply yield of autoclick by 5
+        req:125 autoclick
+        
+    *autoclick7
+        name:Six Fingers
+        desc:Clicking and Autoclickers are <b>10 times</b> as efficient.<//><q>Freaky finger fun.</q>
+        cost:2e14 candy //200 trillion
+        passive:multiply yield of click by 10
+        passive:multiply yield of autoclick by 10
+        req:175 autoclick
+        
+    //Vending Machine upgrades
+    
+    *machine1
+        name:Cognitive Algorithims
+        desc:Vending Machines are <b>+50%</b> more efficient.<//><q>An advanced system that knows exactly what type of candy you want dispended. And no, it's not like the Akinator.</q>
+        cost:130000 candy
+        passive:multiply yield of machine by 1.5
+        req:1 machine
+        
+    *machine2
+        name:Russian Doll-esque Boxes
+        desc:Vending Machines are <b>twice</b> as efficient.<//><q>Ooh, I wonder what's inside! Hey, it's another box! I wonder what's inside that box... another one?? I better get what I want when this ends.</q>
+        cost:650000 candy
+        passive:multiply yield of machine by 2
+        req:10 machine
+        
+    *machine3
+        name:Storage Expansion
+        desc:Vending Machines are <b>twice</b> as efficient.<//><q>Stepping inside the Vending Machine opens a metaphorical door to a whole new world of sugary goodness!</q>
+        cost:6500000 candy
+        passive:multiply yield of machine by 2
+        req:20 machine
+        
+    *machine4
+        name:Retro Games
+        desc:Vending Machines are <b>3 times</b> as efficient.<//><q>Plugged beside the vending machines are notoriously addictive retro games that can keep you hooked forever, with infinite supply of snacks.</q>
+        cost:650000000 candy
+        passive:multiply yield of machine by 3
+        req:40 machine
 				
 Achievements
     *TEMPLATE
