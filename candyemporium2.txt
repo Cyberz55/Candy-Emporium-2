@@ -82,7 +82,7 @@ Buildings
         cost:100000000 candy
         on earn:yield 10 toxic
         on earn:yield 1000000000 candy
-        on earn:lose unlock1
+        on earn:lose winunlock1
         req:250000000 candy:earned
     
     *autoclick
