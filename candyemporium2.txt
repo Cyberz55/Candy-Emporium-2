@@ -122,11 +122,12 @@ Upgrades
     *unlockbuild1
         name:Fructose Pickaxe
         desc:Everything up to Vending Machines are <b>twice</b> as efficient<.>Clicking is also <b>twice</b> as efficient<.>Unlocks something <b>dark and deep.</b><//><q>This sure is spooky, at least I have this delicious pickaxe with me.</q>
+	on earn:yield 10 toxic
+	on earn:yield 1000000000 candy
         passive:multiply yield of autoclick by 2
         passive:multiply yield of click by 2
-        passive:multiply yield of machine by 2
-        cost:5 toxic
-        req:10 toxic:earned
+        passive:multiply yield of machine by 2       
+        req:250000000 candy:earned
         
     //Manual clicking upgrades
     
