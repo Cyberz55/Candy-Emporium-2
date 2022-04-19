@@ -139,8 +139,8 @@ Upgrades
         name:The Haven of Minerals
         desc:Vending Machines are <b>2.5%</b> more efficient per Autoclicker<//>Autoclickers are <b>2.5%</b> more efficient per Vending Machine<.>Caves are <b>twice</b> as efficient.<//><q>One swing of the fructose pickaxe, a fountain of minerals pours out of the hole as I step back to get a broader look. A genius idea arises in my head. Soon after, all the autoclickers managed to convert these into candy.</q>
         cost:237000000 candy
-        passive:multiply yield of machine by (1+((autoclick)*(0.025))
-        passive:multiply yield of autoclick by (1+((machine)*(0.025))
+        passive:multiply yield of machine by (1+((autoclick)*0.025))
+        passive:multiply yield of autoclick by (1+((machine)*0.025))
         passive:multiply yield of cave by 2
         req:20 cave
         
@@ -148,7 +148,7 @@ Upgrades
         name:Rock Penetration Glasses
         desc:Autoclickers are <b>5%</b> more efficient per Cave.<//>Caves are <b>3 times</b> as efficient.<q>Boosting the power of alpha, beta and gamma radiation on your pickaxe, you've managed to literally and figureatively see through rocks! Although it does cause some of candy to get toxic...</q>
         cost:23700000000 candy
-        passive:multiply yield of autoclick by (1+((cave)*(0.05))
+        passive:multiply yield of autoclick by (1+((cave)*0.05))
         passive:multiply yield of cave by 3
         req:40 cave
         
