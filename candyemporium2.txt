@@ -22,6 +22,7 @@ Buttons
         desc:This gives candy
         on click:anim icon wobble
         on click:yield 12 candy
+        on click:if (have unlockres1) yield 50 toxic
         icon:https://cdn.iconscout.com/icon/free/png-256/candy-corn-halloween-sweet-32829.png
         class:bigButton hasFlares
         icon class:shadowed
@@ -62,6 +63,18 @@ Resources
         text:[cavep:ps] candy/s
         always hidden
         
+    *artp
+        name:Art Gallery Yield
+        desc:How much art galleries make every second.
+        text:[artp:ps] candy/s
+        always hidden
+        
+    *networkp
+        name:Candynet Yield
+        desc:How much candynet's make every second.
+        text:[networkp:ps] candy/s
+        always hidden
+        
     *time
         name:Seconds
         desc:How many seconds you've played the game
@@ -75,16 +88,6 @@ Buildings
         start with:1 time
         on tick:yield 1 time
         always hidden
-        
-    *winunlock1
-        name:Invest in the Caves of Candy
-        desc:Rewards you with <b>something interesting</b>
-        cost:100000000 candy
-        on earn:yield 10 toxic
-        on earn:yield 1000000000 candy
-        on click:lose winunlock1
-        req:150000000 candy:earned
-	hidden when 0
     
     *autoclick
         name:Auto Clickers
@@ -112,6 +115,28 @@ Buildings
         on tick:yield 36000 cavep
         on tick:yield 0.0036 toxic
         req:unlockbuild1
+        
+    *art
+        name:Art Galleries (PROTOTYPE)
+        desc:777,777 candy per second
+        cost:0 candy
+        on tick:yield 777777 candy
+        on tick:yield 777777 artp
+        req:unlockbuild2
+        
+    *research
+        name:Candy Research Department (PROTOTYPE)
+        desc:
+        cost:0 candy
+        req:1e13 candy:earned
+        
+    *network
+       name:Candynet
+       desc:
+       cost:0 candy
+       on tick:yield 225 toxic
+       on tick:yield 225 networkp
+       req:50 research
         				
 Upgrades
     *TEMPLATE
@@ -125,6 +150,7 @@ Upgrades
         cost:100 toxic
         passive:multiply yield of autoclick by (1+((cave)*0.028))
         passive:multiply yield of cave by 1.5
+        tag:specialUpgrade
         req:1 cave
         
     *special2
@@ -133,6 +159,7 @@ Upgrades
         cost:23700000 candy
         passive:multiply yield of machine by (1+((cave)*0.025))
         passive:multiply yield of cave by 2
+        tag:specialUpgrade
         req:10 cave
         
     *special3
@@ -142,6 +169,7 @@ Upgrades
         passive:multiply yield of machine by (1+((autoclick)*0.025))
         passive:multiply yield of autoclick by (1+((machine)*0.025))
         passive:multiply yield of cave by 2
+        tag:specialUpgrade
         req:20 cave
         
     *special4
@@ -150,6 +178,7 @@ Upgrades
         cost:23700000000 candy
         passive:multiply yield of autoclick by (1+((cave)*0.05))
         passive:multiply yield of cave by 3
+        tag:specialUpgrade
         req:40 cave
         
     //Unlock building upgrades
@@ -157,12 +186,38 @@ Upgrades
     *unlockbuild1
         name:Fructose Pickaxe
         desc:Everything up to Vending Machines are <b>twice</b> as efficient<.>Clicking is also <b>twice</b> as efficient<.>Unlocks something <b>dark and deep.</b><//><q>This sure is spooky, at least I have this delicious pickaxe with me.</q>
+        cost:0 candy
 	on earn:yield 10 toxic
 	on earn:yield 1000000000 candy
         passive:multiply yield of autoclick by 2
-        passive:multiply yield of click by 2
-        passive:multiply yield of machine by 2       
+        passive:multiply candy yield of click by 2
+        passive:multiply yield of machine by 2
+        tag:upgrade
         req:150000000 candy:earned
+	
+	  *unlockbuild2
+        name:Unlock Art Galleries (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:80 cave
+        
+    *unlockbuild3
+        name:Unlock Candynet (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:10 research
+        
+    //Unlock new currency upgrades
+    
+    *unlockres1
+        name:Unlock Manual Toxic Candy Clicking (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:10 research
+        
         
     //Manual clicking upgrades
     
@@ -170,49 +225,56 @@ Upgrades
         name:Candy Click
         desc:Clicking is <b>5 times</b> as efficient.<//><q>Ha! Avoided a copyright strike, take that Candy Crush- dangnabbit!</q>
         cost:42424 candy
-        passive:multiply yield of click by 5
+        passive:multiply candy yield of click by 5
+        tag:upgrade
         req:4242 candy:earned
         
     *click2
         name:Dual Processing
         desc:Clicking is <b>10 times</b> as efficient.<//><q>Double the trouble.</q>
         cost:424242 candy
-        passive:multiply yield of click by 10
+        passive:multiply candy yield of click by 10
+        tag:upgrade
         req:42424 candy:earned
         
     *click3
         name:Triple Processing
         desc:Clicking is <b>15 times</b> as efficient.<//><q>Triple the trouble.</q>
         cost:4242424 candy
-        passive:multiply yield of click by 15
+        passive:multiply candy yield of click by 15
+        tag:upgrade
         req:424242 candy:earned
         
     *click4
         name:Quadruple Processing
         desc:Clicking is <b>twice</b> as efficient.<//><q>Quadruple the trouble.</q>
         cost:42424242 candy
-        passive:multiply yield of click by 2
+        passive:multiply candy yield of click by 2
+        tag:upgrade
         req:4242424 candy:earned
         
     *click5
         name:Quintuple Processing
         desc:Clicking is <b>twice</b> as efficient.<//><q>Quintuple the trouble.</q>
         cost:424242424 candy
-        passive:multiply yield of click by 2
+        passive:multiply candy yield of click by 2
+        tag:upgrade
         req:42424242 candy:earned
         
     *click6
         name:Sextuple Processing
         desc:Clicking is <b>twice</b> as efficient.<//><q>No joke, I actually had to search up what comes after all this and to my suprise it just follows the quadrillion, quintillion, sextillion pattern. Makes sense in retrospect.</q>
         cost:4242424242 candy
-        passive:multiply yield of click by 2
+        passive:multiply candy yield of click by 2
+        tag:upgrade
         req:424242424 candy:earned
         
     *click7
         name:Septuple Processing
         desc:Clicking is <b>twice</b> as efficient.<//><q>Septuple the trouble.</q>
         cost:424242424242 candy
-        passive:multiply yield of click by 2
+        passive:multiply candy yield of click by 2
+        tag:upgrade
         req:42424242424 candy:earned
         
      //Clicking synergy upgrades
@@ -221,14 +283,16 @@ Upgrades
         name:Synchronous Shoving
         desc:Clicking is <b>1.5%</b> more efficient per Vending Machine.<//><q>A bit rude, but it sure gets the job done.</q>
         cost:650000000 candy
-        passive:multiply yield of click by (1+((machine)*0.015))
+        passive:multiply candy yield of click by (1+((machine)*0.015))
+        tag:upgrade
         req:40 machine and 424242424 candy:earned
         
      *clicksynergy2
         name:Mouse and Moles
         desc:Clicking is <b>1.45%</b> more efficient per Cave.<//><q>It's the beginning of the everlasting rivalry. To this day, we don't know which one is more superior...</q>
         cost:150 toxic
-        passive:multiply yield of click by (1+((cave)*0.0145))
+        passive:multiply candy yield of click by (1+((cave)*0.0145))
+        tag:upgrade
         req:40 cave and 4242424242 candy:earned
         
     //Autoclicker upgrades
@@ -237,56 +301,63 @@ Upgrades
         name:Accelerated Tapping
         desc:Clicking and Autoclickers are <b>+50%</b> more efficient.<//><q>Aww yeah, let's get this started!</q>
         cost:4000 candy
-        passive:multiply yield of click by 1.5
+        passive:multiply candy yield of click by 1.5
         passive:multiply yield of autoclick by 1.5
+        tag:upgrade
         req:1 autoclick
         
     *autoclick2
         name:Steel Gloss Protection
         desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>It's like looking at the sun.</q>
         cost:20000 candy
-        passive:multiply yield of click by 2
+        passive:multiply candy yield of click by 2
         passive:multiply yield of autoclick by 2
+        tag:upgrade
         req:10 autoclick
         
     *autoclick3
         name:Unobtanium Batteries
         desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>Forged by mysterious workers so distrubingly close to the magma layer, they have somehow managed to obtain something you would only dream of getting in the first place.</q>
         cost:200000 candy
-        passive:multiply yield of click by 2
+        passive:multiply candy yield of click by 2
         passive:multiply yield of autoclick by 2
+        tag:upgrade
         req:20 autoclick
         
     *autoclick4
         name:Nitro Hyperdrive
         desc:Clicking and Autoclickers are <b>3 times</b> as efficient.<//><q>GOTTA CLICK FAST!</q>
         cost:20000000 candy
-        passive:multiply yield of click by 3
+        passive:multiply candy yield of click by 3
         passive:multiply yield of autoclick by 3
+        tag:upgrade
         req:40 autoclick
         
     *autoclick5
         name:Cursor Rituals
         desc:Clicking and Autoclickers are <b>4 times</b> as efficient.<//><q>Ancient legend says that when a team of autoclickers perform the sacred ritual, shall recieve ultimate power. It's very strange to watch though, I suggest to look away.</q>
         cost:2000000000 candy
-        passive:multiply yield of click by 4
+        passive:multiply candy yield of click by 4
         passive:multiply yield of autoclick by 4
+        tag:upgrade
         req:80 autoclick
         
     *autoclick6
         name:Cloning Pods
         desc:Clicking and Autoclickers are <b>5 times</b> as efficient.<//><q>By extracting the code of the original autoclicker, I am now able to manifest millions of autoclickers! I wonder if the same can be done for those workers.</q>
         cost:20000000000 candy
-        passive:multiply yield of click by 5
+        passive:multiply candy yield of click by 5
         passive:multiply yield of autoclick by 5
+        tag:upgrade
         req:125 autoclick
         
     *autoclick7
         name:Six Fingers
         desc:Clicking and Autoclickers are <b>10 times</b> as efficient.<//><q>Freaky finger fun.</q>
         cost:2e14 candy //200 trillion
-        passive:multiply yield of click by 10
+        passive:multiply candy yield of click by 10
         passive:multiply yield of autoclick by 10
+        tag:upgrade
         req:175 autoclick
         
     //Vending Machine upgrades
@@ -296,6 +367,7 @@ Upgrades
         desc:Vending Machines are <b>+50%</b> more efficient.<//><q>An advanced system that knows exactly what type of candy you want dispended. And no, it's not like the Akinator.</q>
         cost:130000 candy
         passive:multiply yield of machine by 1.5
+        tag:upgrade
         req:1 machine
         
     *machine2
@@ -303,6 +375,7 @@ Upgrades
         desc:Vending Machines are <b>twice</b> as efficient.<//><q>Ooh, I wonder what's inside! Hey, it's another box! I wonder what's inside that box... another one?? I better get what I want when this ends.</q>
         cost:650000 candy
         passive:multiply yield of machine by 2
+        tag:upgrade
         req:10 machine
         
     *machine3
@@ -310,6 +383,7 @@ Upgrades
         desc:Vending Machines are <b>twice</b> as efficient.<//><q>Stepping inside the Vending Machine opens a metaphorical door to a whole new world of sugary goodness!</q>
         cost:6500000 candy
         passive:multiply yield of machine by 2
+        tag:upgrade
         req:20 machine
         
     *machine4
@@ -317,6 +391,7 @@ Upgrades
         desc:Vending Machines are <b>3 times</b> as efficient.<//><q>Plugged beside the vending machines are notoriously addictive retro games that can keep you hooked forever, with infinite supply of snacks.</q>
         cost:650000000 candy
         passive:multiply yield of machine by 3
+        tag:upgrade
         req:40 machine
         
     *machine5
@@ -324,6 +399,7 @@ Upgrades
         desc:Vending Machines are <b>4 times</b> as efficient.<//><q>DISPENSING CANDY FOREVER AND FOREVER A HUNDRED YEARS!</q>
         cost:6500000000 candy
         passive:multiply yield of machine by 4
+        tag:upgrade
         req:80 machine
         
     *machine6
@@ -331,6 +407,7 @@ Upgrades
         desc:Vending Machines are <b>5 times</b> as efficient.<//><q>The thought of using vending machines virtually and realistically has become a reality, although we haven't tested any possibilities of insanity or catastrophic calamity.</q>
         cost:6500000000000 candy
         passive:multiply yield of machine by 5
+        tag:upgrade
         req:125 machine
         
     *machine7
@@ -338,6 +415,7 @@ Upgrades
         desc:Vending Machines are <b>10 times</b> as efficient.<//><q>Take out all your fustration on vending machines by shaking it vigoriously until it drops every last candy out of the slot. Delectable and diabolical.</q>
         cost:6.5e15 candy //6.5 quadrillion
         passive:multiply yield of machine by 10
+        tag:upgrade
         req:175 machine
 
 Achievements
