@@ -83,7 +83,7 @@ Buildings
         on earn:yield 10 toxic
         on earn:yield 1000000000 candy
         on click:lose winunlock1
-        req:250000000 candy:earned
+        req:150000000 candy:earned
 	hidden when 0
     
     *autoclick
