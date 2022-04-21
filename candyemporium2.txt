@@ -162,7 +162,7 @@ Upgrades
         passive:multiply yield of autoclick by 2
         passive:multiply yield of click by 2
         passive:multiply yield of machine by 2       
-        req:250000000 candy:earned
+        req:150000000 candy:earned
         
     //Manual clicking upgrades
     
