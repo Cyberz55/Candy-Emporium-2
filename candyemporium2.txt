@@ -343,3 +343,147 @@ Upgrades
 Achievements
     *TEMPLATE
         on click:anim glow
+
+    *1candy
+        name:Welcome
+        desc:Make <b>1</b> candy all time.<//><q>It begins here. Feeling confident?</q>
+        req:1 candy:earned
+        tag:cheevo
+        
+    *100candy
+        name:Batch of candy
+        desc:Make <b>100</b> candy all time.
+        req:100 candy:earned
+        tag:cheevo
+        
+    *10Kcandy
+        name:Collection of candy
+        desc:Make <b>10,000</b> candy all time.
+        req:10000 candy:earned
+        tag:cheevo
+        
+    *1Mcandy
+        name:Millionare's worth
+        desc:Make <b>1,000,000</b> candy all time.
+        req:1000000 candy:earned
+        tag:cheevo
+        
+    *100Mcandy
+        name:Flourish
+        desc:Make <b>100,000,000</b> candy all time.
+        req:100000000 candy:earned
+        tag:cheevo
+        
+    *10Bcandy
+        name:Sweet Succession
+        desc:Make <b>10,000,000,000</b> candy all time.
+        req:10000000000 candy:earned
+        tag:cheevo
+       
+    *1candyps
+        name:Getting Started
+        desc:Make <b>1</b> candy per second.
+        req:1 candy per second
+        tag:cheevo
+        
+    *10candyps
+        name:Yum yum yum
+        desc:Make <b>10</b> candy per second.
+        req:10 candy per second
+        tag:cheevo
+        
+    *100candyps
+        name:Raining candy
+        desc:Make <b>100</b> candy per second.<//><q>No need to ask why.</q>
+        req:100 candy per second
+        tag:cheevo
+        
+    *1Kcandyps
+        name:Production cycle
+        desc:Make <b>1,000</b> candy per second.
+        req:1000 candy per second
+        tag:cheevo
+        
+    *100Kcandyps
+        name:Candy wonderland
+        desc:Make <b>100,000</b> candy per second.
+        req:100000 candy per second
+        tag:cheevo
+        
+    *10Mcandyps
+        name:Wacky profits
+        desc:Make <b>10,000,000</b> candy per second.
+        req:10000000 candy per second
+        tag:cheevo
+        
+    *1Bcandyps
+        name:Hey Candy
+        desc:Make <b>1,000,000,000</b> candy per second.<//><q>You gonna open the door?</q>
+        req:1000000000 candy per second
+        tag:cheevo
+        
+    *1autoclick
+        name:Clickity
+        desc:Own <b>1</b> autoclicker.
+        req:1 autoclick
+        tag:cheevo
+        
+    *2autoclick
+        name:Clickity clickity
+        desc:Own <b>2</b> autoclickers.<//><q>How original.</q>
+        req:2 autoclick
+        tag:cheevo
+        
+    *50autoclick
+        name:Mouse party
+        desc:Own <b>50</b> autoclickers.
+        req:50 autoclick
+        tag:cheevo
+        
+    *100autoclick
+        name:Jazz hands
+        desc:Own <b>100</b> autoclickers.
+        req:100 autoclick
+        tag:cheevo
+        
+    *150autoclick
+        name:Pull my finger
+        desc:Own <b>150</b> autoclickers.
+        req:150 autoclick
+        tag:cheevo
+        
+    *1machine
+        name:Coin operated??
+        desc:Own <b>1</b> vending machine.<//><q>NO!</q>
+        req:1 machine
+        tag:cheevo
+        
+    *50machine
+        name:Killer machine
+        desc:Own <b>50</b> vending machines.
+        req:50 machine
+        tag:cheevo
+        
+    *100machine
+        name:Deus ex machina
+        desc:Own <b>100</b> vending machines.
+        req:100 machine
+        tag:cheevo
+        
+    *150machine
+        name:Machine learning
+        desc:Own <b>150</b> vending machines.
+        req:150 machine
+        tag:cheevo
+        
+    *1cave
+        name:Cave Crawler
+        desc:Own <b>1</b> cave.
+        req:1 cave
+        tag:cheevo
+        
+    *50cave
+        name:Mazey mines
+        desc:Own <b>50</b> caves.
+        req:50 cave
+        tag:cheevo
