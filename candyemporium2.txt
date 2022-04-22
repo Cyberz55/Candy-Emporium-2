@@ -302,6 +302,7 @@ Upgrades
         name:Prestige (PROTOTYPE)
         desc:
         cost:0 candy
+	req:600 omni
         on earn:yield ((pow(candy:earned/1e12, 1/5))-(toxic:earned)) spirit
         on earn:yield 1 timesPrestiged
         on earn:lose candy
@@ -321,6 +322,7 @@ Upgrades
         on earn:lose sound
         on earn:lose speed
         on earn:lose life
+	on earn:lose omni
         on earn:lose tag:upgrade
         on earn:lose tag:building
         on earn:lose tag:caveSpecial
