@@ -58,7 +58,6 @@ Resources
          name:spirit candy
          desc:Classified
          class:noBackground
-         show earned
          hidden when 0
          icon:
         
