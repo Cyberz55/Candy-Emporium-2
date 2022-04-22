@@ -125,7 +125,7 @@ Resources
         name:Times Prestiged
         desc:How many times you prestiged
         class:noBackground
-        show earned
+        always hidden
         
     *time
         name:Seconds
