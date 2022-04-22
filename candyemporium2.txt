@@ -23,6 +23,7 @@ Buttons
         on click:anim icon wobble
         on click:yield 12 candy
         on click:if (have unlockres1) yield 50 toxic
+        on click:if (have unlockres2) yield 225 anti
         icon:https://cdn.iconscout.com/icon/free/png-256/candy-corn-halloween-sweet-32829.png
         class:bigButton hasFlares
         icon class:shadowed
@@ -40,6 +41,22 @@ Resources
     *toxic
          name:toxic candy
          desc:You can spend these on stuff
+         class:noBackground
+         show earned
+         hidden when 0
+         icon:
+         
+    *anti
+         name:anti candy
+         desc:You can spend these on stuff
+         class:noBackground
+         show earned
+         hidden when 0
+         icon:
+         
+    *spirit
+         name:spirit candy
+         desc:Classified
          class:noBackground
          show earned
          hidden when 0
@@ -72,8 +89,44 @@ Resources
     *networkp
         name:Candynet Yield
         desc:How much candynet's make every second.
-        text:[networkp:ps] candy/s
+        text:[networkp:ps] toxic/s
         always hidden
+        
+    *casinop
+        name:Casino Yield
+        desc:How much casino's make every second.
+        text:[casinop:ps] candy/s
+        always hidden
+        
+    *magicp
+        name:Wizard Yield
+        desc:How much wizard's make every second.
+        text:[magicp:ps] candy/s
+        always hidden
+        
+    *soundp
+        name:Sound Yield
+        desc:How much sound converters make every second.
+        text:[soundp:ps] anti/s
+        always hidden
+        
+    *speedp
+        name:Speed Yield
+        desc:How much speed converters make every second.
+        text:[speedp:ps] toxic/s
+        always hidden
+        
+    *lifep
+        name:Life Yield
+        desc:How much life converters make every second.
+        text:[lifep:ps] candy/s
+        always hidden
+        
+    *timesPrestiged
+        name:Times Prestiged
+        desc:How many times you prestiged
+        class:noBackground
+        show earned
         
     *time
         name:Seconds
@@ -95,6 +148,7 @@ Buildings
 	      cost:400 candy
         on tick:yield 25 candy
 				on tick:yield 25 autoclickp
+        tag:building
 				icon:
 				unlocked
         
@@ -104,16 +158,18 @@ Buildings
         cost:13000 candy
         on tick:yield 1100 candy
         on tick:yield 1100 machinep
+        tag:building
         req:6500 candy:earned
         icon:
         
     *cave
         name:Caves
-        desc:<//><b>Base Effect:</b><.>Produces 36000 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[cavep:ps]</b> candy every second.<//>Unlocks new buildings and special upgrades over time.<//><q>Deep caves to explore, what new things can we discover?</q>
+        desc:<//><b>Base Effect:</b><.>Produces 36000 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[cavep:ps]</b> candy every second.<//>Unlocks special upgrades over time.<//><q>Deep caves to explore, what new things can we discover?</q>
         cost:474000 candy
         on tick:yield 36000 candy
         on tick:yield 36000 cavep
         on tick:yield 0.0036 toxic
+        tag:building
         req:unlockbuild1
         
     *art
@@ -122,64 +178,201 @@ Buildings
         cost:0 candy
         on tick:yield 777777 candy
         on tick:yield 777777 artp
+        tag:building
         req:unlockbuild2
         
     *research
         name:Candy Research Department (PROTOTYPE)
-        desc:
+        desc:Unlock special upgrades and buildings overtime
         cost:0 candy
+        tag:building
         req:1e13 candy:earned
         
     *network
-       name:Candynet
-       desc:
+       name:Candynet (PROTOTYPE)
+       desc:+225 toxic candy per second
        cost:0 candy
        on tick:yield 225 toxic
        on tick:yield 225 networkp
-       req:50 research
+       tag:building
+       req:unlockbuild3
+       
+    *casino
+       name:Casinos (PROTOTYPE)
+       desc:+80 billion candy per second
+       cost:0 candy, 0 toxic
+       on tick:yield 8e10 candy
+       tag:building
+       req:unlockbuild4
+       
+    *dream
+       name:Dreamcasters (PROTOTYPE)
+       desc:Unlock special upgrades overtime
+       cost:0 candy
+       tag:building
+       req:1e16 candy:earned
+       
+    *magic
+       name:Wizards (PROTOTYPE)
+       desc:+50 trillion candy per second
+       cost:0 candy
+       on tick:yield 5e13 candy
+       tag:building
+       req:unlockbuild5
+       
+    *device
+       name:Candyverse Device (PROTOTYPE)
+       text:Candyverse Device ([this]%)
+       desc:Charge up the device by levelling it up while it unlocks special upgrades overtime
+       cost:0 candy
+       tag:building
+       req:unlockbuild6
+       limit:200
+       
+    *diary
+       name:Universe Journal (PROTOTYPE)
+       text:Universe Journal ([this]/300)
+       desc:Levelling it up unlocks journal entries that give powerful boosts
+       cost:0 candy
+       tag:building
+       req:unlockbuild7
+       limit:300
+       
+    *sound
+       name:Sound Converters (PROTOTYPE)
+       desc:+3210 anti candy per second
+       cost:0 anti
+       on tick:yield 3210 anti
+       on tick:yield 3210 soundp
+       tag:building
+       req:unlockbuild8
+       
+    *speed
+       name:Speed Converters (PROTOTYPE)
+       desc:+225 billion toxic candy per second
+       cost:0 toxic
+       on tick:yield 2.25e11 toxic
+       on tick:yield 2.25e11 speedp
+       tag:building
+       req:unlockbuild9
+       
+    *life
+       name:Life Converters (PROTOTYPE)
+       desc:1 octillion candy per second
+       cost:0 toxic, 0 anti
+       on tick:yield 1e27 candy
+       on tick:yield 1e27 lifep
+       tag:building
+       req:unlockbuild10
+       
+    *omni
+       name:Omnicandy (PROTOTYPE)
+       text:Omnicandy ([this]/600)
+       desc:
+       cost:0 candy, 0 toxic, 0 anti
+       tag:building
+       req:unlockbuild11
+       limit:600
+       
+    *transcendence
+       name:Transcendence
+       desc:
+       cost:0 candy, 0 toxic, 0 anti, 0 spirit
+       passive:multiply candy yield of click by (1+((transcendence)*0.1))
+       passive:multiply toxic yield of click by (1+((transcendence)*0.1))
+       passive:multiply anti yield of click by (1+((transcendence)*0.1))
+       passive:multiply yield of autoclick by (1+((transcendence)*0.1))
+       passive:multiply yield of machine by (1+((transcendence)*0.1))
+       passive:multiply yield of cave by (1+((transcendence)*0.1))
+       passive:multiply yield of art by (1+((transcendence)*0.1))
+       passive:multiply yield of network by (1+((transcendence)*0.1))
+       passive:multiply yield of casino by (1+((transcendence)*0.1))
+       passive:multiply yield of magic by (1+((transcendence)*0.1))
+       passive:multiply yield of sound by (1+((transcendence)*0.1))
+       passive:multiply yield of speed by (1+((transcendence)*0.1))
+       passive:multiply yield of life by (1+((transcendence)*0.1))
+       tag:prestigeBuilding
         				
 Upgrades
     *TEMPLATE
         on click:anim glow
         
-    //Special upgrades
+    *prestige
+        name:Prestige (PROTOTYPE)
+        desc:
+        cost:0 candy
+        on earn:yield ((pow(candy:earned/1e12, 1/5))-(toxic:earned)) spirit
+        on earn:yield 1 timesPrestiged
+        on earn:lose candy
+        on earn:lose toxic
+        on earn:lose anti
+        on earn:lose building
+        on earn:lose autoclick
+        on earn:lose machine
+        on earn:lose cave
+        on earn:lose art
+        on earn:lose research
+        on earn:lose network
+        on earn:lose casino
+        on earn:lose dream
+        on earn:lose magic
+        on earn:lose device
+        on earn:lose diary
+        on earn:lose sound
+        on earn:lose speed
+        on earn:lose life
+        on earn:lose tag:upgrade
+        on earn:lose tag:building
+        on earn:lose tag:caveSpecial
+        
+    //Special upgrades from Caves
     
-    *special1
+    *cave1
         name:Digitalized Finding Units
         desc:Autoclickers are <b>2.8%</b> more efficient per Cave. Caves are <b>+50%</b> more efficient.<//><q>What?? You're saying they've already been invented?! Whatever, I'm gonna implement them in my autoclickers instead!</q>
         cost:100 toxic
         passive:multiply yield of autoclick by (1+((cave)*0.028))
         passive:multiply yield of cave by 1.5
-        tag:specialUpgrade
+        tag:caveSpecial
         req:1 cave
         
-    *special2
+    *cave2
         name:The Sound of Destroying
         desc:Vending Machines are <b>2.5%</b> more efficient per Cave. Caves are <b>twice</b> as efficient.<//><q>Destroy, build, destroy.</q>
         cost:23700000 candy
         passive:multiply yield of machine by (1+((cave)*0.025))
         passive:multiply yield of cave by 2
-        tag:specialUpgrade
+        tag:caveSpecial
         req:10 cave
         
-    *special3
+    *cave3
         name:The Haven of Minerals
         desc:Vending Machines are <b>2.5%</b> more efficient per Autoclicker<//>Autoclickers are <b>2.5%</b> more efficient per Vending Machine<.>Caves are <b>twice</b> as efficient.<//><q>One swing of the fructose pickaxe, a fountain of minerals pours out of the hole as I step back to get a broader look. A genius idea arises in my head. Soon after, all the autoclickers managed to convert these into candy.</q>
         cost:237000000 candy
         passive:multiply yield of machine by (1+((autoclick)*0.025))
         passive:multiply yield of autoclick by (1+((machine)*0.025))
         passive:multiply yield of cave by 2
-        tag:specialUpgrade
+        tag:caveSpecial
         req:20 cave
         
-    *special4
+    *cave4
         name:Rock Penetration Glasses
         desc:Autoclickers are <b>5%</b> more efficient per Cave.<//>Caves are <b>3 times</b> as efficient.<q>Boosting the power of alpha, beta and gamma radiation on your pickaxe, you've managed to literally and figureatively see through rocks! Although it does cause some of candy to get toxic...</q>
         cost:23700000000 candy
         passive:multiply yield of autoclick by (1+((cave)*0.05))
         passive:multiply yield of cave by 3
-        tag:specialUpgrade
+        tag:caveSpecial
         req:40 cave
+        
+    //Special upgrades from CRD
+        
+    //Sugar Angel upgrades from Dreamcasters
+    
+    //Special upgrades from Candyverse Device
+    
+    //Special upgrades from Universe Journal
+    
+    //Special upgrades from Omnicandy
         
     //Unlock building upgrades
     
@@ -209,7 +402,63 @@ Upgrades
         tag:upgrade
         req:10 research
         
-    //Unlock new currency upgrades
+    *unlockbuild4
+        name:Unlock Casinos (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:50 research
+        
+    *unlockbuild5
+        name:Unlock Wizards (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:200 research
+        
+    *unlockbuild6
+        name:Unlock Candyverse Device (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:300 research
+        
+    *unlockbuild7
+        name:Unlock Universe Journal (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:200 device
+        
+    *unlockbuild8
+        name:Unlock Sound Converters (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:100 diary
+        
+    *unlockbuild9
+        name:Unlock Speed Converters (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:200 diary
+        
+    *unlockbuild10
+        name:Unlock Life Converters (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:300 diary
+        
+    *unlockbuild11
+        name:Unlock Omnicandy (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:800 research
+        
+    //Unlock new resource upgrades
     
     *unlockres1
         name:Unlock Manual Toxic Candy Clicking (PROTOTYPE)
@@ -217,7 +466,13 @@ Upgrades
         cost:0 candy
         tag:upgrade
         req:10 research
-        
+       
+    *unlockres2
+        name:Unlock Manual Anti-candy Clicking (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:upgrade
+        req:200 device
         
     //Manual clicking upgrades
     
@@ -417,6 +672,15 @@ Upgrades
         passive:multiply yield of machine by 10
         tag:upgrade
         req:175 machine
+        
+     //Rank Upgrades
+     
+     *rank24
+        name:Rank Twenty Four (PROTOTYPE)
+        desc:
+        cost:0 candy
+        tag:rankUpgrade
+        req:24 timesPrestiged
 
 Achievements
     *TEMPLATE
