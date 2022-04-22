@@ -292,6 +292,7 @@ Buildings
        passive:multiply yield of speed by (1+((transcendence)*0.1))
        passive:multiply yield of life by (1+((transcendence)*0.1))
        tag:prestigeBuilding
+       req:rank24
         				
 Upgrades
     *TEMPLATE
