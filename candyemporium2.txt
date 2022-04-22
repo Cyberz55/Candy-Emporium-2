@@ -303,7 +303,7 @@ Upgrades
         desc:
         cost:0 candy
 	req:600 omni
-        on earn:yield (pow((candy:earned/7e13, 1/4))-(toxic:earned)) spirit
+        on earn:yield pow(candy:earned/1e13, 1/4)-(toxic:earned) spirit
 	on earn:lose prestige
         on earn:yield 1 timesPrestiged
         on earn:lose candy
