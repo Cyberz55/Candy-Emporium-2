@@ -306,7 +306,6 @@ Upgrades
         on earn:lose candy
         on earn:lose toxic
         on earn:lose anti
-        on earn:lose building
         on earn:lose autoclick
         on earn:lose machine
         on earn:lose cave
