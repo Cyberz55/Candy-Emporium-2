@@ -186,7 +186,7 @@ Buildings
         desc:Unlock special upgrades and buildings overtime
         cost:0 candy
         tag:building
-        req:1e13 candy:earned
+        req:1e12 candy:earned
         
     *network
        name:Candynet (PROTOTYPE)
