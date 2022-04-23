@@ -682,7 +682,7 @@ Upgrades
         desc:
         cost:0 candy
         tag:rankUpgrade
-        req:24 timesPrestiged
+        req:1 timesPrestiged
 
 Achievements
     *TEMPLATE
