@@ -390,7 +390,7 @@ Upgrades
         tag:upgrade
         req:150000000 candy:earned
 	
-	  *unlockbuild2
+    *unlockbuild2
         name:Unlock Art Galleries (PROTOTYPE)
         desc:
         cost:0 candy
@@ -536,7 +536,7 @@ Upgrades
         
      //Clicking synergy upgrades
      
-     *clicksynergy1
+     *machineclick1
         name:Synchronous Shoving
         desc:Clicking is <b>1.5%</b> more efficient per Vending Machine.<//><q>A bit rude, but it sure gets the job done.</q>
         cost:650000000 candy
@@ -544,7 +544,7 @@ Upgrades
         tag:upgrade
         req:40 machine and 424242424 candy:earned
         
-     *clicksynergy2
+     *caveclick1
         name:Mouse and Moles
         desc:Clicking is <b>1.45%</b> more efficient per Cave.<//><q>It's the beginning of the everlasting rivalry. To this day, we don't know which one is more superior...</q>
         cost:150 toxic
@@ -557,7 +557,7 @@ Upgrades
     *autoclick1
         name:Accelerated Tapping
         desc:Clicking and Autoclickers are <b>+50%</b> more efficient.<//><q>Aww yeah, let's get this started!</q>
-        cost:4000 candy
+        cost:2000 candy
         passive:multiply candy yield of click by 1.5
         passive:multiply yield of autoclick by 1.5
         tag:upgrade
@@ -566,7 +566,7 @@ Upgrades
     *autoclick2
         name:Steel Gloss Protection
         desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>It's like looking at the sun.</q>
-        cost:20000 candy
+        cost:10000 candy
         passive:multiply candy yield of click by 2
         passive:multiply yield of autoclick by 2
         tag:upgrade
@@ -575,7 +575,7 @@ Upgrades
     *autoclick3
         name:Unobtanium Batteries
         desc:Clicking and Autoclickers are <b>twice</b> as efficient.<//><q>Forged by mysterious workers so distrubingly close to the magma layer, they have somehow managed to obtain something you would only dream of getting in the first place.</q>
-        cost:200000 candy
+        cost:60000 candy
         passive:multiply candy yield of click by 2
         passive:multiply yield of autoclick by 2
         tag:upgrade
@@ -584,7 +584,7 @@ Upgrades
     *autoclick4
         name:Nitro Hyperdrive
         desc:Clicking and Autoclickers are <b>3 times</b> as efficient.<//><q>GOTTA CLICK FAST!</q>
-        cost:20000000 candy
+        cost:1080000 candy
         passive:multiply candy yield of click by 3
         passive:multiply yield of autoclick by 3
         tag:upgrade
@@ -593,7 +593,7 @@ Upgrades
     *autoclick5
         name:Cursor Rituals
         desc:Clicking and Autoclickers are <b>4 times</b> as efficient.<//><q>Ancient legend says that when a team of autoclickers perform the sacred ritual, shall recieve ultimate power. It's very strange to watch though, I suggest to look away.</q>
-        cost:2000000000 candy
+        cost:54000000 candy
         passive:multiply candy yield of click by 4
         passive:multiply yield of autoclick by 4
         tag:upgrade
@@ -602,7 +602,7 @@ Upgrades
     *autoclick6
         name:Cloning Pods
         desc:Clicking and Autoclickers are <b>5 times</b> as efficient.<//><q>By extracting the code of the original autoclicker, I am now able to manifest millions of autoclickers! I wonder if the same can be done for those workers.</q>
-        cost:20000000000 candy
+        cost:3780000000 candy
         passive:multiply candy yield of click by 5
         passive:multiply yield of autoclick by 5
         tag:upgrade
@@ -611,7 +611,7 @@ Upgrades
     *autoclick7
         name:Six Fingers
         desc:Clicking and Autoclickers are <b>10 times</b> as efficient.<//><q>Freaky finger fun.</q>
-        cost:2e14 candy //200 trillion
+        cost:340200000000 candy
         passive:multiply candy yield of click by 10
         passive:multiply yield of autoclick by 10
         tag:upgrade
@@ -622,7 +622,7 @@ Upgrades
     *machine1
         name:Cognitive Algorithims
         desc:Vending Machines are <b>+50%</b> more efficient.<//><q>An advanced system that knows exactly what type of candy you want dispended. And no, it's not like the Akinator.</q>
-        cost:130000 candy
+        cost:65000 candy
         passive:multiply yield of machine by 1.5
         tag:upgrade
         req:1 machine
@@ -630,7 +630,7 @@ Upgrades
     *machine2
         name:Russian Doll-esque Boxes
         desc:Vending Machines are <b>twice</b> as efficient.<//><q>Ooh, I wonder what's inside! Hey, it's another box! I wonder what's inside that box... another one?? I better get what I want when this ends.</q>
-        cost:650000 candy
+        cost:325000 candy
         passive:multiply yield of machine by 2
         tag:upgrade
         req:10 machine
@@ -638,7 +638,7 @@ Upgrades
     *machine3
         name:Storage Expansion
         desc:Vending Machines are <b>twice</b> as efficient.<//><q>Stepping inside the Vending Machine opens a metaphorical door to a whole new world of sugary goodness!</q>
-        cost:6500000 candy
+        cost:1950000 candy
         passive:multiply yield of machine by 2
         tag:upgrade
         req:20 machine
@@ -646,7 +646,7 @@ Upgrades
     *machine4
         name:Retro Games
         desc:Vending Machines are <b>3 times</b> as efficient.<//><q>Plugged beside the vending machines are notoriously addictive retro games that can keep you hooked forever, with infinite supply of snacks.</q>
-        cost:650000000 candy
+        cost:35100000 candy
         passive:multiply yield of machine by 3
         tag:upgrade
         req:40 machine
@@ -654,7 +654,7 @@ Upgrades
     *machine5
         name:Infinite Candy Generation
         desc:Vending Machines are <b>4 times</b> as efficient.<//><q>DISPENSING CANDY FOREVER AND FOREVER A HUNDRED YEARS!</q>
-        cost:6500000000 candy
+        cost:1755000000 candy
         passive:multiply yield of machine by 4
         tag:upgrade
         req:80 machine
@@ -662,7 +662,7 @@ Upgrades
     *machine6
         name:Virtual Vending
         desc:Vending Machines are <b>5 times</b> as efficient.<//><q>The thought of using vending machines virtually and realistically has become a reality, although we haven't tested any possibilities of insanity or catastrophic calamity.</q>
-        cost:6500000000000 candy
+        cost:122850000000 candy
         passive:multiply yield of machine by 5
         tag:upgrade
         req:125 machine
@@ -670,7 +670,7 @@ Upgrades
     *machine7
         name:Venting Machines
         desc:Vending Machines are <b>10 times</b> as efficient.<//><q>Take out all your fustration on vending machines by shaking it vigoriously until it drops every last candy out of the slot. Delectable and diabolical.</q>
-        cost:6.5e15 candy //6.5 quadrillion
+        cost:1.10565e+13 candy //roughly 11 trillion
         passive:multiply yield of machine by 10
         tag:upgrade
         req:175 machine
