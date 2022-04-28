@@ -163,6 +163,7 @@ Buildings
         
     *cave
         name:Caves
+        text:Caves ([this]/150)
         desc:<//><b>Base Effect:</b><.>Produces 36000 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[cavep:ps]</b> candy every second.<//>Unlocks special upgrades over time.<//><q>Deep caves to explore, what new things can we discover?</q>
         cost:474000 candy
         on tick:yield 36000 candy
@@ -170,11 +171,12 @@ Buildings
         on tick:yield 0.0036 toxic
         tag:building
         req:unlockbuild1
+        limit:150
         
     *art
-        name:Art Galleries (PROTOTYPE)
-        desc:777,777 candy per second
-        cost:0 candy
+        name:Art Galleries
+        desc:<//><b>Base Effect:</b><.>Produces 777,777 candy per second.<//><b>Effect:</b><.>Currently Makes <b>[artp:ps]</b> candy every second.<//><q>Works of art that produces candy.</q>
+        cost:8800000 candy
         on tick:yield 777777 candy
         on tick:yield 777777 artp
         tag:building
@@ -381,9 +383,9 @@ Upgrades
     *unlockbuild1
         name:Fructose Pickaxe
         desc:Everything up to Vending Machines are <b>twice</b> as efficient<.>Clicking is also <b>twice</b> as efficient<.>Unlocks something <b>dark and deep.</b><//><q>This sure is spooky, at least I have this delicious pickaxe with me.</q>
-        cost:0 candy
-	on earn:yield 10 toxic
-	on earn:yield 1000000000 candy
+        cost:300000000 candy
+	      on earn:yield 10 toxic
+	      on earn:yield 1000000000 candy
         passive:multiply yield of autoclick by 2
         passive:multiply candy yield of click by 2
         passive:multiply yield of machine by 2
@@ -391,9 +393,14 @@ Upgrades
         req:150000000 candy:earned
 	
     *unlockbuild2
-        name:Unlock Art Galleries (PROTOTYPE)
-        desc:
-        cost:0 candy
+        name:Subverting Expectations
+        desc:Everything up to Caves are <b>twice</b> as efficient.<.>Autoclickers are <b>1%</b> more efficient per Cave<.>Unlocks a <b>new building</b>.<//><q>Lo and behold, this new construction will blow your minds, make sure to wear a helmet!</q>
+        cost:237000000000 candy
+        on earn:yield 100000000000 candy
+        passive:multiply yield of autoclick by (1+((cave)*0.01))
+        passive:multiply yield of autoclick by 2
+        passive:multiply yield of machine by 2
+        passive:multiply yield of cave by 2
         tag:upgrade
         req:80 cave
         
@@ -536,7 +543,7 @@ Upgrades
         
      //Clicking synergy upgrades
      
-     *machineclick1
+    *machineclick1
         name:Synchronous Shoving
         desc:Clicking is <b>1.5%</b> more efficient per Vending Machine.<//><q>A bit rude, but it sure gets the job done.</q>
         cost:650000000 candy
@@ -544,13 +551,21 @@ Upgrades
         tag:upgrade
         req:40 machine and 424242424 candy:earned
         
-     *caveclick1
+    *caveclick1
         name:Mouse and Moles
         desc:Clicking is <b>1.45%</b> more efficient per Cave.<//><q>It's the beginning of the everlasting rivalry. To this day, we don't know which one is more superior...</q>
         cost:150 toxic
         passive:multiply candy yield of click by (1+((cave)*0.0145))
         tag:upgrade
         req:40 cave and 4242424242 candy:earned
+        
+    *artclick1
+        name:The Art of Clicking
+        desc:Clicking is <b>1.4%</b> more efficient per Art Gallery.<//><q>Criminally underrated.</q>
+        cost:23760000000 candy
+        passive:multiply candy yield of click by (1+((art)*0.014))
+        tag:upgrade
+        req:40 art and 424242424242 candy:earned
         
     //Autoclicker upgrades
         
@@ -675,9 +690,67 @@ Upgrades
         tag:upgrade
         req:175 machine
         
-     //Rank Upgrades
+     //Art Gallery upgrades
      
-     *rank24
+    *art1
+        name:Jewel Encrusted Picture Frames
+        desc:Art Galleries are <b>+50%</b> more efficient.<//><q>Very delicately handcrafted gems to attract even the most judgemental of art critics.</q>
+        cost:44000000 candy
+        passive:multiply yield of art by 1.5
+        tag:upgrade
+        req:1 art
+        
+     *art2
+        name:Nuance
+        desc:Art Galleries are <b>twice</b> as efficient.<//><q>It's actually the name of the newest art creation one of the workers made, they put their blood, sweat and tears into it, I'm not kidding! You can actuallly see the stains on the painting, it just really conveys the soul crushing experience of working on art pieces in return for a ridiculous medium of exchange. You may say that it's scary, but nothing is more scary than losing your nuance.</q>
+        cost:220000000 candy
+        passive:multiply yield of art by 2
+        tag:upgrade
+        req:10 art
+        
+     *art3
+        name:Signatures
+        desc:Art Galleries are <b>twice</b> as efficient.<//><q>You idiot, how did you forget beforehand? What if someone steals our artwork? Throw them in candy jail!</q>
+        cost:1320000000 candy
+        passive:multiply yield of art by 2
+        tag:upgrade
+        req:20 art
+        
+     *art4
+        name:Copycat Artists
+        desc:Art Galleries are <b>3 times</b> as efficient.<//><q>OK, so we found a decent solution to our previous problem! Just make sure they offer prices in candy.</q>
+        cost:23760000000 candy
+        passive:multiply yield of art by 3 
+        tag:upgrade
+        req:40 art
+        
+     *art5
+        name:Creativity Juice
+        desc:Art Galleries are <b>4 times</b> as efficient.<//><q>People may mistake this for a drug, but I promise there's no side effects... apart from imagination!</q>
+        cost:1.188e12 candy //1.188 trillion
+        passive:multiply yield of art by 4
+        tag:upgrade
+        req:80 art
+        
+     *art6
+        name:A Box
+        desc:Art Galleries are <b>5 times</b> as efficient.<//><q>Stolen from the depths of Bikini Bottom, legend says this mysterious box has intresting capabilities that once unlocked, can give all sorts of inspiration for art pieces. One guy has used this to create paintings of mountain climbing, rocket launchings, pirates and even robots!</q>
+        cost:8.316e13 candy //roughly 83.2 trillion
+        passive:multiply yield of art by 5
+        tag:upgrade
+        req:125 art
+        
+     *art7
+        name:Art Bot
+        desc:Art Galleries are <b>10 times</b> as efficient.<//><q>This newly designed AI can replicate human's art by- WHAT IT ALREADY EXISTS?! I'll make it in a physical form, that'll show them.</q>
+        cost:7.4844e+15 candy //7.5 quadrillion
+        passive:multiply yield of art by 10
+        tag:upgrade
+        req:175 art
+        
+    //Rank Upgrades
+     
+    *rank24
         name:Rank Twenty Four (PROTOTYPE)
         desc:
         cost:0 candy
@@ -830,4 +903,40 @@ Achievements
         name:Mazey mines
         desc:Own <b>50</b> caves.
         req:50 cave
+        tag:cheevo
+        
+    *100cave
+        name:Welcome to my mine
+        desc:Own <b>100</b> caves.<//><q>We are mining candy.</q>
+        req:100 cave
+        tag:cheevo
+
+    *150cave
+        name:Don't mine at night
+        desc:Own <b>150</b> caves.
+        req:150 cave
+        tag:cheevo
+        
+    *1art
+        name:The Candy Night
+        desc:Own <b>1</b> art gallery.
+        req:1 art
+        tag:cheevo
+        
+    *50art
+        name:The Last Supper
+        desc:Own <b>50</b> art galleries.<//><q>They had sweets that time.</q>
+        req:50 art
+        tag:cheevo
+        
+    *100art
+        name:Art for art's sake
+        desc:Own <b>100</b> art galleries.
+        req:100 art
+        tag:cheevo
+        
+    *150art
+        name:NFTs
+        desc:Own <b>150</b> art gallieries.<//><q>AH! GET THAT AWAY! PLEASE!! (static) Please do the world a favor and buy EFT's instead.</q>
+        req:150 art
         tag:cheevo
