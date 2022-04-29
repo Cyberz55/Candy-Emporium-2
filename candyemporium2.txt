@@ -613,7 +613,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424 candy:earned
         
-    *click16
+    *click17
         name:Septdecuple Processing
         desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Septdecuple the trouble.</q>
         cost:424242424242424242424242424242424242424 candy
@@ -621,7 +621,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242 candy:earned
         
-    *click17
+    *click18
         name:Octdecuple Processing
         desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Octdecuple the trouble.</q>
         cost:424242424242424242424242424242424242424242 candy
@@ -629,7 +629,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424 candy:earned
         
-    *click18
+    *click19
         name:Nondecuple Processing
         desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Nondecuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424 candy
@@ -637,7 +637,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424242 candy:earned
         
-    *click19
+    *click20
         name:Vigintuple Processing
         desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Vigintuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424242 candy
@@ -645,7 +645,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424242424 candy:earned
         
-    *click20
+    *click21
         name:Unvigintuple Processing
         desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Unvigintuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424242424 candy
@@ -653,7 +653,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424242424242 candy:earned
         
-    *click21
+    *click22
         name:Duovigintuple Processing
         desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Duovigintuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424242424242 candy
@@ -661,7 +661,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424242424242424 candy:earned
         
-    *click22
+    *click23
         name:Trevigintuple Processing
         desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Trevigintuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424242424242424 candy
@@ -669,7 +669,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424242424242424242 candy:earned
         
-    *click23
+    *click24
         name:Quattorvigintuple Processing
         desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Quattorvigintuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424242424242424242 candy
@@ -677,7 +677,7 @@ Upgrades
         tag:upgrade
         req:42424242424242424242424242424242424242424242424242424242424 candy:earned
         
-    *click24
+    *click25
         name:Quinvigintuple Processing
         desc:Clicking <b>0.05%</b> more efficient per autoclicker.<//><q>Quinvigintuple the trouble.</q>
         cost:424242424242424242424242424242424242424242424242424242424242424 candy
