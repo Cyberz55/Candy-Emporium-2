@@ -541,7 +541,151 @@ Upgrades
         tag:upgrade
         req:42424242424 candy:earned
         
-     //Clicking synergy upgrades
+    *click8
+        name:Octuple Processing
+        desc:Clicking <b>twice</b> as efficient.<//><q>Octuple the trouble.</q>
+        cost:42424242424242 candy
+        passive:multiply candy yield of click by 2
+        tag:upgrade
+        req:4242424242424 candy:earned
+        
+    *click9
+        name:Nontuple Processing
+        desc:Clicking <b>twice</b> as efficient.<//><q>Nontuple the trouble.</q>
+        cost:4242424242424242 candy
+        passive:multiply candy yield of click by 2
+        tag:upgrade
+        req:424242424242424 candy:earned
+        
+    *click10
+        name:Decuple Processing
+        desc:Clicking <b>twice</b> as efficient.<//><q>Decuple the trouble.</q>
+        cost:424242424242424242 candy
+        passive:multiply candy yield of click by 2
+        tag:upgrade
+        req:42424242424242424 candy:earned
+        
+    *click11
+        name:Undecuple Processing
+        desc:Clicking <b>2%</b> more efficient per autoclicker.<//><q>Undecuple the trouble.</q>
+        cost:424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.02))
+        tag:upgrade
+        req:42424242424242424242 candy:earned
+        
+    *click12
+        name:Duodecuple Processing
+        desc:Clicking <b>1%</b> more efficient per autoclicker.<//><q>Duodecuple the trouble.</q>
+        cost:424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.01))
+        tag:upgrade
+        req:42424242424242424242424 candy:earned
+        
+    *click13
+        name:Tredecuple Processing
+        desc:Clicking <b>0.5%</b> more efficient per autoclicker.<//><q>Tredecuple the trouble.</q>
+        cost:424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.005))
+        tag:upgrade
+        req:42424242424242424242424242 candy:earned
+        
+    *click14
+        name:Quatordecuple Processing
+        desc:Clicking <b>0.5%</b> more efficient per autoclicker.<//><q>Quatordecuple the trouble.</q>
+        cost:424242424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.005))
+        tag:upgrade
+        req:42424242424242424242424242424 candy:earned
+        
+    *click15
+        name:Quindecuple Processing
+        desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Quindecuple the trouble.</q>
+        cost:424242424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.0025))
+        tag:upgrade
+        req:42424242424242424242424242424242 candy:earned
+        
+    *click16
+        name:Sexdecuple Processing
+        desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Sexdecuple the- uhh, nevermind...</q>
+        cost:424242424242424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.0025))
+        tag:upgrade
+        req:42424242424242424242424242424242424 candy:earned
+        
+    *click16
+        name:Septdecuple Processing
+        desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Septdecuple the trouble.</q>
+        cost:424242424242424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.0025))
+        tag:upgrade
+        req:42424242424242424242424242424242424242 candy:earned
+        
+    *click17
+        name:Octdecuple Processing
+        desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Octdecuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.0025))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424 candy:earned
+        
+    *click18
+        name:Nondecuple Processing
+        desc:Clicking <b>0.25%</b> more efficient per autoclicker.<//><q>Nondecuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.0025))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242 candy:earned
+        
+    *click19
+        name:Vigintuple Processing
+        desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Vigintuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.001))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242424 candy:earned
+        
+    *click20
+        name:Unvigintuple Processing
+        desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Unvigintuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.001))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242424242 candy:earned
+        
+    *click21
+        name:Duovigintuple Processing
+        desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Duovigintuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.001))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242424242424 candy:earned
+        
+    *click22
+        name:Trevigintuple Processing
+        desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Trevigintuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.001))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242424242424242 candy:earned
+        
+    *click23
+        name:Quattorvigintuple Processing
+        desc:Clicking <b>0.1%</b> more efficient per autoclicker.<//><q>Quattorvigintuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424242424242424242 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.001))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242424242424242424 candy:earned
+        
+    *click24
+        name:Quinvigintuple Processing
+        desc:Clicking <b>0.05%</b> more efficient per autoclicker.<//><q>Quinvigintuple the trouble.</q>
+        cost:424242424242424242424242424242424242424242424242424242424242424 candy
+        passive:multiply candy yield of click by (1+((autoclick)*0.0005))
+        tag:upgrade
+        req:42424242424242424242424242424242424242424242424242424242424242 candy:earned
+    
+    //Clicking synergy upgrades
      
     *machineclick1
         name:Synchronous Shoving
@@ -631,6 +775,46 @@ Upgrades
         passive:multiply yield of autoclick by 10
         tag:upgrade
         req:175 autoclick
+        
+    *autoclick8
+        name:Time Clicking
+        desc:Autoclickers are <b>25 times</b> as efficient.<//><q>Heh, just cheesily avoiding copyright...</q>
+        cost:5.4432e+13 candy
+        passive:multiply yield of autoclick by 25
+        tag:upgrade
+        req:250 autoclick
+        
+    *autoclick9
+        name:Clicknetic Energy
+        desc:Autoclickers are <b>33 times</b> as efficient.<//><q>At the cost of original energy too? Pah, who needs that, let's do it!</q>
+        cost:1.3608e+16 candy
+        passive:multiply yield of autoclick by 33
+        tag:upgrade
+        req:300 autoclick
+        
+     *autoclick10
+        name:Combo!
+        desc:Autoclickers are <b>55 times</b> as efficient.<//><q>A very helpful add-on to these autoclickers that can perform multiple combos, in fact, infinite combos, you can never have too many of a streak. Just as long as it doesn't become an addiction, but the fact that you've unlocked this upgrade probably just shows. </q>
+        cost:5.57928e+18 candy
+        passive:multiply yield of autoclick by 55 
+        tag:upgrade
+        req:450 autoclick
+        
+    *autoclick11
+        name:Manual Auto Clicking
+        desc:Autoclickers are <b>75 times</b> as efficient.<//><q>What?</q>
+        cost:3.6823248e+22 candy
+        passive:multiply yield of autoclick by 75
+        tag:upgrade
+        req:500 autoclick
+        
+    *autoclick12
+        name:Illegal Fingers
+        desc:Autoclickers are <b>100 times</b> as efficient.<//><q>I'm sorry, we just couldn't resist, this could increase our production a hundredfold!</q>
+        cost:2.5813097e+26 candy
+        passive:multiply yield of autoclick by 100
+        tag:upgrade
+        req:650 autoclick
         
     //Vending Machine upgrades
     
