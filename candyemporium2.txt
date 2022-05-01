@@ -183,8 +183,8 @@ Buildings
         req:unlockbuild2
         
     *research
-        name:Candy Research Department (PROTOTYPE)
-        desc:Unlock special upgrades and buildings overtime
+        name:Candy Research Department 
+        desc:Unlock <b>special upgrades</b> and <b>buildings</b> overtime.<//><q>Scientists and workers to do extensive research on how to improve candy production.
         cost:200000000000 candy
         tag:building
         req:1e12 candy:earned
@@ -192,7 +192,7 @@ Buildings
     *network
        name:Candynet (PROTOTYPE)
        desc:+225 toxic candy per second
-       cost:0 candy
+       cost:450 toxic
        on tick:yield 225 toxic
        on tick:yield 225 networkp
        tag:building
@@ -400,7 +400,7 @@ Upgrades
         passive:multiply yield of speed by 1.15
         passive:multiply yield of life by 1.15
         tag:researchUpgrade
-        req:25 research
+        req:1 research
         
     *research2
         name:Sugar Free Machines
