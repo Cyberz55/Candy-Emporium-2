@@ -409,7 +409,7 @@ Upgrades
         passive:multiply yield of machine by 10
         passive:multiply candy yield of click by (1+((machine)*0.0125))
         tag:researchUpgrade
-        req:75 research
+        req:25 research
         
     *research3
         name:Night Vision Goggles
