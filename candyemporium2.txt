@@ -507,52 +507,52 @@ Upgrades
         
     *research11
         name:Experimental Mode
-        desc:Everything is <b>0.037%</b> more efficient per building owned.<//><q>No harm in trying something different, even if it risks making the entire universe unstable.
+        desc:Everything is <b>0.037%</b> more efficient per Autoclicker. Autoclickers are <b>37 times</b> as efficient.<//><q>No harm in trying something different, even if it risks making the entire universe unstable.
         cost:9.6552268e36 candy, 9.65522686e26 toxic, 135630 anti
-        passive:multiply candy yield of click by (1+((tag:building)*0.00037))
-        passive:multiply toxic yield of click by (1+((tag:building)*0.00037))
-        passive:multiply anti yield of click by (1+((tag:building)*0.00037))
-        passive:multiply yield of autoclick by (1+((tag:building)*0.00037))
-        passive:multiply yield of machine by (1+((tag:building)*0.00037))
-        passive:multiply yield of cave by (1+((tag:building)*0.00037))
-        passive:multiply yield of art by (1+((tag:building)*0.00037))
-        passive:multiply yield of network by (1+((tag:building)*0.00037))
-        passive:multiply yield of casino by (1+((tag:building)*0.00037))
-        passive:multiply yield of magic by (1+((tag:building)*0.00037))
-        passive:multiply yield of sound by (1+((tag:building)*0.00037))
-        passive:multiply yield of speed by (1+((tag:building)*0.00037))
-        passive:multiply yield of life by (1+((tag:building)*0.00037))
+        passive:multiply candy yield of click by (1+((autoclick)*0.00037))
+        passive:multiply toxic yield of click by (1+((autoclick)*0.00037))
+        passive:multiply anti yield of click by (1+((autoclick)*0.00037))
+        passive:multiply yield of autoclick by 37
+        passive:multiply yield of machine by (1+((autoclick)*0.00037))
+        passive:multiply yield of cave by (1+((autoclick)*0.00037))
+        passive:multiply yield of art by (1+((autoclick)*0.00037))
+        passive:multiply yield of network by (1+((autoclick)*0.00037))
+        passive:multiply yield of casino by (1+((autoclick)*0.00037))
+        passive:multiply yield of magic by (1+((autoclick)*0.00037))
+        passive:multiply yield of sound by (1+((autoclick)*0.00037))
+        passive:multiply yield of speed by (1+((autoclick)*0.00037))
+        passive:multiply yield of life by (1+((autoclick)*0.00037))
         tag:researchUpgrade
         req:600 research
         
     *research12
         name:Beta Testers
-        desc:Everything is <b>0.027%</b> more efficient per building owned.<//><q>They make sure things run smoothly, while using keeping those bugs that could actually end up becoming a feature.
+        desc:Everything is <b>0.027%</b> more efficient per Autoclicker. Autoclickers are <b>27 times</b> as efficient.<//><q>They make sure things run smoothly, while using keeping those bugs that could actually end up becoming a feature.
         cost:6.00072346e41 candy, 6.00072349e31 toxic, 2441340 anti
-        passive:multiply candy yield of click by (1+((tag:building)*0.00027))
-        passive:multiply toxic yield of click by (1+((tag:building)*0.00027))
-        passive:multiply anti yield of click by (1+((tag:building)*0.00027))
-        passive:multiply yield of autoclick by (1+((tag:building)*0.00027))
-        passive:multiply yield of machine by (1+((tag:building)*0.00027))
-        passive:multiply yield of cave by (1+((tag:building)*0.00027))
-        passive:multiply yield of art by (1+((tag:building)*0.00027))
-        passive:multiply yield of network by (1+((tag:building)*0.00027))
-        passive:multiply yield of casino by (1+((tag:building)*0.00027))
-        passive:multiply yield of magic by (1+((tag:building)*0.00027))
-        passive:multiply yield of sound by (1+((tag:building)*0.00027))
-        passive:multiply yield of speed by (1+((tag:building)*0.00027))
-        passive:multiply yield of life by (1+((tag:building)*0.00027))
+        passive:multiply candy yield of click by (1+((autoclick)*0.00027))
+        passive:multiply toxic yield of click by (1+((autoclick)*0.00027))
+        passive:multiply anti yield of click by (1+((autoclick)*0.00027))
+        passive:multiply yield of autoclick by 27
+        passive:multiply yield of machine by (1+((autoclick)*0.00027))
+        passive:multiply yield of cave by (1+((autoclick)*0.00027))
+        passive:multiply yield of art by (1+((autoclick)*0.00027))
+        passive:multiply yield of network by (1+((autoclick)*0.00027))
+        passive:multiply yield of casino by (1+((autoclick)*0.00027))
+        passive:multiply yield of magic by (1+((autoclick)*0.00027))
+        passive:multiply yield of sound by (1+((autoclick)*0.00027))
+        passive:multiply yield of speed by (1+((autoclick)*0.00027))
+        passive:multiply yield of life by (1+((autoclick)*0.00027))
         tag:researchUpgrade
         req:650 research
         
     *research13
         name:Official Launch
-        desc:Everything is <b>0.017%</b> more efficient per Autoclicker.<//><q>Here we see Worker #955 getting ready to make her launch to... somewhere. Where is that somewhere? I have no idea. I hope she comes back with something, like candy. I'm starting to have my doubts in all honesty. Anyways, how has your day been, mine has been fine. Oh, you want to get this upgrade? Well, don't let me keep you waiting! Alright, I don't understand why you're still reading this, I thought you wanted to get this upgrade, don't you wanna see a bunch of numbers going up faster? To be fair, I guess flavor text does make things a bit more appealing, so I guess I do understand why you're still reading this, but this specific upgrade doesn't even have good flavor text, I'm just rambling about something so random. OK, OK, I'm leaving, sheesh.
+        desc:Everything is <b>0.017%</b> more efficient per Autoclicker. Autoclickers are <b>17 times</b> as efficient.<//><q>Here we see Worker #955 getting ready to make her launch to... somewhere. Where is that somewhere? I have no idea. I hope she comes back with something, like candy. I'm starting to have my doubts in all honesty. Anyways, how has your day been, mine has been fine. Oh, you want to get this upgrade? Well, don't let me keep you waiting! Alright, I don't understand why you're still reading this, I thought you wanted to get this upgrade, don't you wanna see a bunch of numbers going up faster? To be fair, I guess flavor text does make things a bit more appealing, so I guess I do understand why you're still reading this, but this specific upgrade doesn't even have good flavor text, I'm just rambling about something so random. OK, OK, I'm leaving, sheesh.
         cost:7.23987285e46 candy, 7.23987289e36 toxic, 122067000 anti
         passive:multiply candy yield of click by (1+((autoclick)*0.00017))
         passive:multiply toxic yield of click by (1+((autoclick)*0.00017))
         passive:multiply anti yield of click by (1+((autoclick)*0.00017))
-        passive:multiply yield of autoclick by (1+((autoclick)*0.00017))
+        passive:multiply yield of autoclick by 17
         passive:multiply yield of machine by (1+((autoclick)*0.00017))
         passive:multiply yield of cave by (1+((autoclick)*0.00017))
         passive:multiply yield of art by (1+((autoclick)*0.00017))
