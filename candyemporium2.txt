@@ -185,7 +185,7 @@ Buildings
     *research
         name:Candy Research Department (PROTOTYPE)
         desc:Unlock special upgrades and buildings overtime
-        cost:0 candy
+        cost:200000000000 candy
         tag:building
         req:1e12 candy:earned
         
@@ -328,6 +328,7 @@ Upgrades
         on earn:lose tag:upgrade
         on earn:lose tag:building
         on earn:lose tag:caveSpecial
+        on earn:lose tag:researchUpgrade
         
     //Special upgrades from Caves
     
@@ -380,7 +381,130 @@ Upgrades
         req:125 cave
         
     //Special upgrades from CRD
+    
+    *research1
+        name:Private Testing
+        desc:Everything is <b>15%</b> more efficient. Autoclickers are <b>5 times</b> as efficient.<//><q>Go tell everything else that this private area is.. well... private!</q>
+        cost:1e12 candy, 100 toxic
+        passive:multiply candy yield of click by 1.15
+        passive:multiply toxic yield of click by 1.15
+        passive:multiply anti yield of click by 1.15
+        passive:multiply yield of autoclick by 5.75
+        passive:multiply yield of machine by 1.15
+        passive:multiply yield of cave by 1.15
+        passive:multiply yield of art by 1.15
+        passive:multiply yield of network by 1.15
+        passive:multiply yield of casino by 1.15
+        passive:multiply yield of magic by 1.15
+        passive:multiply yield of sound by 1.15
+        passive:multiply yield of speed by 1.15
+        passive:multiply yield of life by 1.15
+        tag:researchUpgrade
+        req:25 research
         
+    *research2
+        name:Sugar Free Machines
+        desc:Vending Machines are <b>10 times</b> as efficient. Clicking is <b>1.25%</b> more efficient per Vending Machine.<//><q>Using less costly resources while plastering a tired cliche to attract unsuspecting manufacturers? Genius!</q>
+        cost:5e12 candy, 500 toxic
+        passive:multiply yield of machine by 10
+        passive:multiply candy yield of click by (1+((machine)*0.0125))
+        tag:researchUpgrade
+        req:75 research
+        
+    *research3
+        name:Night Vision Goggles
+        desc:Everything is <b>0.5%</b> more efficient per Cave. Caves are <b>5 times</b> as efficient.<//><q>Admittedly, we feel a bit stupid for not using it before.</q>    cost:3e13 candy, 3000 toxic
+        passive:multiply candy yield of click by (1+((cave)*0.005))
+        passive:multiply toxic yield of click by (1+((cave)*0.005))
+        passive:multiply anti yield of click by (1+((cave)*0.005))
+        passive:multiply yield of autoclick by (1+((cave)*0.005))
+        passive:multiply yield of machine by (1+((cave)*0.005))
+        passive:multiply yield of cave by 5
+        passive:multiply yield of art by (1+((cave)*0.005))
+        passive:multiply yield of network by (1+((cave)*0.005))
+        passive:multiply yield of casino by (1+((cave)*0.005))
+        passive:multiply yield of magic by (1+((cave)*0.005))
+        passive:multiply yield of sound by (1+((cave)*0.005))
+        passive:multiply yield of speed by (1+((cave)*0.005))
+        passive:multiply yield of life by (1+((cave)*0.005))
+        tag:researchUpgrade
+        req:100 research
+        
+    *research4
+        name:Generous Commissions
+        desc:Art Galleries are <b>2%</b> more efficient per Candynet. Candynets are <b>1%</b> more efficient per Art Gallery.<//><q>So generous, you might feel like charging more!</q>
+        cost:5.4e14 candy, 54000 toxic
+        passive:multiply yield of art by (1+((network)*0.02))
+        passive:multiply yield of network by (1+((art)*0.01))
+        tag:researchUpgrade
+        req:150 research
+        
+    *research5
+        name:Antimatter Clicking
+        desc:Clicking is <b>10 times</b> as efficient. Casinos are <b>1%</b> more efficient per Wizard. Wizards are <b>0.5%</b> more efficient per Casino.<//><q>It just so happens that clicking does matter as much as it doesn't matter. But why does it matter if it doesn't matter, what matters is that the antimatter makes it more effective. Now, what's the matter? You seem to be severely puzzled.</q>
+        cost:2.7e16 candy, 2700000 toxic
+        passive:multiply candy yield of click by 10
+        passive:multiply yield of casino by (1+((magic)*0.01))
+        passive:multiply yield of magic by (1+((casino)*0.005))
+        tag:researchUpgrade
+        req:250 research
+        
+    *research6
+        name:Theory of Something
+        desc:Everything is <b>0.25%</b> more efficient per Art Gallery. Art Galleries are also <b>7 times</b> as efficient. Autoclickers are also <b>3.5 times</b> as efficient.<//><q>We're not quite sure what it is yet.</q>
+        cost:1.89e19 candy, 1890000000 toxic
+        passive:multiply candy yield of click by (1+((art)*0.0025))
+        passive:multiply toxic yield of click by (1+((art)*0.0025))
+        passive:multiply anti yield of click by (1+((art)*0.0025))
+        passive:multiply yield of autoclick by 3.5
+        passive:multiply yield of machine by (1+((art)*0.0025))
+        passive:multiply yield of cave by (1+((art)*0.0025))
+        passive:multiply yield of art by 7
+        passive:multiply yield of network by (1+((art)*0.0025))
+        passive:multiply yield of casino by (1+((art)*0.0025))
+        passive:multiply yield of magic by (1+((art)*0.0025))
+        passive:multiply yield of sound by (1+((art)*0.0025))
+        passive:multiply yield of speed by (1+((art)*0.0025))
+        passive:multiply yield of life by (1+((art)*0.0025))
+        tag:researchUpgrade
+        req:350 research
+        
+    *research7
+        name:Vexing Machines
+        desc:Vending Machines are <b>22 times</b> as efficient. Candynets are <b>1.5%</b> more efficient per Wizards. Wizards are <b>0.25%</b> more efficient per Casino. Casinos are <b>0.5%</b> more efficient per Candynet.<//><q>It's just venting machines but you're just angry for the sake of it.</q>
+        cost:1.4175e22 candy, 1417500000000 toxic
+        passive:multiply yield of machine by 22
+        passive:multiply yield of network by (1+((magic)*0.015))
+        passive:multiply yield of magic by (1+((casino)*0.0025))
+        passive:multiply yield of casino by (1+((network)*0.005))
+        tag:researchUpgrade
+        req:400 research
+        
+    *research8
+        name:Four Dimensional Clicking
+        desc:Clicking is <b>5 times</b> as efficient. Autoclickers are <b>5 times</b> as efficient.<//><q>YEAH! SPECIAL EFFECTS!</q>
+        cost:2.055375e25 candy, 2.055375e15 toxic
+        passive:multiply candy yield of click by 5
+        passive:multiply yield of autoclick by 5
+        tag:researchUpgrade
+        req:450 research
+        
+    *research9
+        name:Saturation Advancement
+        desc:Candynets are <b>7 times</b> as efficient.<//><q>Yep, that's right. We're making our network more saturated, to appeal to the general public. Hey, hey, don't look at me like that, if it's good for them, it's good for us!</q>
+        cost:4.521825e28 candy, 4.521825e18 toxic, 4521 anti
+        passive:multiply yield of network by 7
+        tag:researchUpgrade
+        req:500 research
+        
+    *research10
+        name:Light Magic
+        desc:Wizards are <b>8 times</b> as efficient.<//><q>OK, so get this. What if we had... light magic! So it's like dark magic but- (Worker #654 - fired for having a good idea but presenting it terribly)
+        cost:1.65046612e32 candy, 1.65046613e22 toxic, 22605 anti
+        passive:multiply yield of magic by 8
+        tag:researchUpgrade
+        req:550 research
+                              
     //Sugar Angel upgrades from Dreamcasters
     
     //Special upgrades from Candyverse Device
@@ -405,7 +529,7 @@ Upgrades
 	
     *unlockbuild2
         name:Subverting Expectations
-        desc:Everything up to Caves are <b>twice</b> as efficient.<.>Autoclickers are <b>1%</b> more efficient per Cave<.>Unlocks a <b>new building</b>.<//><q>Lo and behold, this new construction will blow your minds, make sure to wear a helmet!</q>
+        desc:Everything up to Caves are <b>twice</b> as efficient.<.>Autoclickers are also <b>1%</b> more efficient per Cave<.>Unlocks a <b>new building</b>.<//><q>Lo and behold, this new construction will blow your minds, make sure to wear a helmet!</q>
         cost:237000000000 candy
         on earn:yield 100000000000 candy
         passive:multiply yield of autoclick by (1+((cave)*0.01))
@@ -982,7 +1106,47 @@ Upgrades
         passive:multiply yield of art by 10
         tag:upgrade
         req:175 art
+
+    *art8
+        name:Algorithmic Colour Choices
+        desc:Art Galleries are <b>25 times</b> as efficient.<//><q>Through the use of machine learning, the data gathered from predictions of what you're might paint can determine what colour you should use next! Oh, it appears that the machine is biased and it only wants you to draw sweets. Well, we can't pick and choose which ones we follow, chop chop!</q>
+        cost:9.04365e20 candy
+        passive:multiply yield of art by 25
+        tag:upgrade
+        req:250 art
         
+    *art9
+        name:Mind to Masterpiece
+        desc:Art Galleries are <b>33 times</b> as efficient.<//><q>Think of anything in your mind and it'll now be projected into the can- oh.. oh no, I just realized the problem with this... no.. NO.. NO!!!</q>
+        cost:1.989603e24 candy
+        passive:multiply yield of art by 33
+        tag:upgrade
+        req:300 art
+        
+    *art10
+        name:Reverse Artchology
+        desc:Art Galleries are <b>55 times</b> as efficient.<//><q>I bet you can't make a work of art that would generate a fortune worth of candy. What? You actually can't? YOU'RE FIRED!</q>
+        cost:7.26205095e27 candy
+        passive:multiply yield of art by 55
+        tag:upgrade
+        req:450 art
+        
+    *art11
+        name:Painting Paradox
+        desc:Art Galleries are <b>75 times</b> as efficient.<//><q>"Sometimes to make a great painting, you have to not make a great painting." ~Leonardo da Vinci, I assume</q>
+        cost:4.24829981e32 candy
+        passive:multiply yield of art by 75
+        tag:upgrade
+        req:500 art
+        
+     *art12
+        name:MS Paint
+        desc:Art Galleries are <b>100 times</b> as efficient.<//><q>It goes without saying that this is probably our biggest breakthrough by far, we have somehow managed to create such an intricate piece of software, that may seem puzzling to the average human, but in greater magnification, is something far more impressive. With what one can achieve by implementing less, can get more. ("We are now currently facing a lawsuit with Microsoft, I still can't believe that they still care about that product..." ~ Worker #420)</q>
+        cost:2.64031833e37 candy
+        passive:multiply yield of art by 100
+        tag:upgrade
+        req:650 art
+     
     //Rank Upgrades
      
     *rank24
