@@ -1006,7 +1006,7 @@ Upgrades
         cost:650000000 candy
         passive:multiply candy yield of click by (1+((machine)*0.015))
         tag:upgrade
-        req:40 machine and 424242424 candy:earned
+        req:40 machine
         
     *machineclick2
         name:Engine Combustion
@@ -1014,7 +1014,7 @@ Upgrades
         cost:1.3359938e18 candy
         passive:multiply candy yield of click by (1+((machine)*0.003))
         tag:upgrade
-        req:250 machine and 424242424242 candy:earned
+        req:250 machine
         
     *caveclick1
         name:Mouse and Moles
@@ -1022,7 +1022,7 @@ Upgrades
         cost:150 toxic
         passive:multiply candy yield of click by (1+((cave)*0.0145))
         tag:upgrade
-        req:40 cave and 4242424242 candy:earned
+        req:40 cave 
         
     *caveclick2
         name:Enigmatic Mines
@@ -1030,7 +1030,7 @@ Upgrades
         cost:150000 toxic
         passive:multiply candy yield of click by (1+((cave)*0.0029))
         tag:upgrade
-        req:150 cave and 4242424242424 candy:earned
+        req:150 cave
         
     *artclick1
         name:The Art of Clicking
@@ -1038,7 +1038,7 @@ Upgrades
         cost:23760000000 candy
         passive:multiply candy yield of click by (1+((art)*0.014))
         tag:upgrade
-        req:40 art and 424242424242 candy:earned
+        req:40 art
         
     *artclick2
         name:Artifical Paintings
@@ -1046,7 +1046,23 @@ Upgrades
         cost:9.04365e20 candy
         passive:multiply candy yield of click by (1+((art)*0.0028))
         tag:upgrade
-        req:250 art and 424242424242424 candy:earned
+        req:250 art
+        
+    *networkclick1
+        name:Click Farms
+        desc:Toxic candy clicking is <b>1.35%</b> more efficient per Candynet.<//><q>It's fine, nobody really pays attention to them anyways. Until just ONE person mentions it and the whole world goes crazy! Typical.</q>
+        cost:1215000 toxic
+        passive:multiply toxic yield of click by (1+((network)*0.0135))
+        tag:upgrade
+        req:40 network
+        
+    *networkclick2
+        name:Autoclickers
+        desc:Toxic candy clicking is <b>0.27%</b> more efficient per Candynet.<//><q>Oh geez, we're going meta now?</q>
+        cost:4.62459375e16 toxic
+        passive:multiply toxic yield of click (1+((network)*0.0027))
+        tag:upgrade
+        req:250 network 
         
     //Autoclicker upgrades
         
@@ -1311,7 +1327,7 @@ Upgrades
 
     *art8
         name:Algorithmic Colour Choices
-        desc:Art Galleries are <b>25 times</b> as efficient.<//><q>Through the use of machine learning, the data gathered from predictions of what you're might paint can determine what colour you should use next! Oh, it appears that the machine is biased and it only wants you to draw sweets. Well, we can't pick and choose which ones we follow, chop chop!</q>
+        desc:Art Galleries are <b>25 times</b> as efficient.<//><q>Through the use of machine learning, the data gathered from predictions of what you might paint can determine what colour you should use next! Oh, it appears that the machine is biased and it only wants you to draw sweets. Well, we can't pick and choose which ones we follow, chop chop!</q>
         cost:9.04365e20 candy
         passive:multiply yield of art by 25
         tag:upgrade
@@ -1348,6 +1364,104 @@ Upgrades
         passive:multiply yield of art by 100
         tag:upgrade
         req:650 art
+        
+    //Candynet upgrades
+        
+    *network1
+        name:Super Stable Servers
+        desc:Candynets are <b>+50%</b> more efficient.<//><q>One of the things that our programmers absolutely hate to do as soon as we launched our own network, but it's worth it. At least we think it is, our youngest programmer threw the most calculated tantrum we've ever seen before afterwards.</q>
+        cost:2250 toxic
+        passive:multiply yield of network by 1.5
+        tag:upgrade
+        req:1 network
+        
+    *network2
+        name:CTTPS
+        desc:Candynets are <b>twice</b> as efficient.<//><q>A custom made internet protocol, stands for Candytext Total Production Surge. If that's not absurdly on the nose then I don't know what is.</q>
+        cost:11250 toxic
+        passive:multiply yield of network by 2
+        tag:upgrade
+        req:10 network
+        
+    *network3
+        name:Algorithmic Forums
+        desc:Candynets are <b>twice</b> as efficient.<//><q>Through the use of machine learning, the data gathered from predictions of what your interests are, will automatically redirect you to the website of your dreams.</q>
+        cost:67500 toxic
+        passive:multiply yield of network by 2
+        tag:upgrade
+        req:20 network
+        
+    *network4
+        name:Thought Provoking Memes
+        desc:Candynets are <b>3 times</b> as efficient.<//><q>Garanteed to make you laugh till you drop, but only the more observant ones will eventually realise what lies under it's rather silly surface. Soon after, you would have fully understood the memes in so many levels, that every meme you find next, could be another leap into a seemingly endless meme rabbit hole. OK, so look, we didn't intend to make this an addiction, that's your own fault.</q>
+        cost:1215000 toxic
+        passive:multiply yield of network by 3
+        tag:upgrade
+        req:40 network
+        
+    *network5
+        name:An actually working report system
+        desc:Candynets are <b>4 times</b> as efficient.<//><q>Back in the day, we used to beat people up for saying such things, everythings all topsy-turvy now! #The Very Old Worker</q>
+        cost:60750000 toxic
+        passive:multiply yield of network by 4
+        tag:upgrade
+        req:80 network
+        
+    *network6
+        name:Intellectual Trolling
+        desc:Candynets are <b>5 times</b> as efficient.<//><q>We do a lil' calculatin', then we do a lil' thinkin', then we do a lil' trollin'.</q>
+        cost:42525000000 toxic
+        passive:multiply yield of network by 5
+        tag:upgrade
+        req:125 network
+        
+    *network7
+        name:Candygram
+        desc:Candynets are <b>10 times</b> as efficient.<//><q>The newly created social media app, designed to keep you hooked forever and forget the fact that you had meaning or purpose, but you will earn artificial happiness in return. And no, we don't sell your data, that's stupid. We just... uh... use it for focus groups... yeah... Also we severely lack in a business model, so we hardly make money. But we don't care, everyone's using our app!</q>
+        cost:3.189375e13 toxic
+        passive:multiply yield of network by 10
+        tag:upgrade
+        req:175 network
+        
+    *network8
+        name:Censorship
+        desc:Candynets are <b>25 times</b> as efficient.<//><q>Never call our candy rubbish. Ever.</q>
+        cost:4.62459375e16 toxic
+        passive:multiply yield of network by 25
+        tag:upgrade
+        req:250 network
+        
+    *network9
+        name:Infinite FPS
+        desc:Candynets are <b>33 times</b> as efficient.<//><q>Fine, we did something original. Happy now?</q>
+        cost:1.01741063e20 toxic
+        passive:multiply yield of network by 33
+        tag:upgrade
+        req:300 network
+        
+    *network10
+        name:Four Dimensional Adverts
+        desc:Candynets are <b>55 times</b> as efficient.<//><q>Probably the most interesting thing we added to the most uninteresting thing on the internet.</q>
+        cost:3.7135488e23 toxic
+        passive:multiply yield of network by 55
+        tag:upgrade
+        req:450 network
+        
+    *network11
+        name:Sugar Hat Hackers
+        desc:Candynets are <b>75 times</b> as efficient.<//><q>It's funny, people think they're actually the good guys, with their silly hats. Well, I mean, they ARE the good guys, obviously, but uhh... they're good to us at least.</q>
+        cost:2.17242605e28 toxic
+        passive:multiply yield of network by 75
+        tag:upgrade
+        req:500 network
+        
+    *network12
+        name:Candy Emporium Wiki
+        desc:Candynets are <b>100 times</b> as efficient.<//><q>Maybe not</q>
+        cost:1.35016279e33 toxic
+        passive:multiply yield of network by 100
+        tag:upgrade
+        req:650 network
      
     //Rank Upgrades
      
