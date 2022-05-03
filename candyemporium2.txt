@@ -1057,7 +1057,7 @@ Upgrades
         req:40 network
         
     *networkclick2
-        name:Autoclickers
+        name:Auto-clickers
         desc:Toxic candy clicking is <b>0.27%</b> more efficient per Candynet.<//><q>Oh geez, we're going meta now?</q>
         cost:4.62459375e16 toxic
         passive:multiply toxic yield of click (1+((network)*0.0027))
