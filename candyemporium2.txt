@@ -184,7 +184,7 @@ Buildings
         
     *research
         name:Candy Research Department 
-        desc:Unlock <b>special upgrades</b> and <b>buildings</b> overtime.<//><q>Scientists and workers to do extensive research on how to improve candy production.
+        desc:Unlock <b>special upgrades</b> and <b>buildings</b> overtime.<//><q>Scientists and workers to do extensive research on how to improve candy production.</q>
         cost:200000000000 candy
         tag:building
         req:1e12 candy:earned
@@ -499,7 +499,7 @@ Upgrades
         
     *research10
         name:Light Magic
-        desc:Wizards are <b>8 times</b> as efficient.<//><q>OK, so get this. What if we had... light magic! So it's like dark magic but- (Worker #654 - fired for having a good idea but presenting it terribly)
+        desc:Wizards are <b>8 times</b> as efficient.<//><q>OK, so get this. What if we had... light magic! So it's like dark magic but- (Worker #654 - fired for having a good idea but presenting it terribly)</q>
         cost:1.65046612e32 candy, 1.65046613e22 toxic, 22605 anti
         passive:multiply yield of magic by 8
         tag:researchUpgrade
@@ -507,7 +507,7 @@ Upgrades
         
     *research11
         name:Experimental Mode
-        desc:Everything is <b>0.037%</b> more efficient per Autoclicker. Autoclickers are <b>37 times</b> as efficient.<//><q>No harm in trying something different, even if it risks making the entire universe unstable.
+        desc:Everything is <b>0.037%</b> more efficient per Autoclicker. Autoclickers are <b>37 times</b> as efficient.<//><q>No harm in trying something different, even if it risks making the entire universe unstable.</q>
         cost:9.6552268e36 candy, 9.65522686e26 toxic, 135630 anti
         passive:multiply candy yield of click by (1+((autoclick)*0.00037))
         passive:multiply toxic yield of click by (1+((autoclick)*0.00037))
@@ -527,7 +527,7 @@ Upgrades
         
     *research12
         name:Beta Testers
-        desc:Everything is <b>0.027%</b> more efficient per Autoclicker. Autoclickers are <b>27 times</b> as efficient.<//><q>They make sure things run smoothly, while using keeping those bugs that could actually end up becoming a feature.
+        desc:Everything is <b>0.027%</b> more efficient per Autoclicker. Autoclickers are <b>27 times</b> as efficient.<//><q>They make sure things run smoothly, while using keeping those bugs that could actually end up becoming a feature.</q>
         cost:6.00072346e41 candy, 6.00072349e31 toxic, 2441340 anti
         passive:multiply candy yield of click by (1+((autoclick)*0.00027))
         passive:multiply toxic yield of click by (1+((autoclick)*0.00027))
@@ -547,7 +547,7 @@ Upgrades
         
     *research13
         name:Official Launch
-        desc:Everything is <b>0.017%</b> more efficient per Autoclicker. Autoclickers are <b>17 times</b> as efficient.<//><q>Here we see Worker #955 getting ready to make her launch to... somewhere. Where is that somewhere? I have no idea. I hope she comes back with something, like candy. I'm starting to have my doubts in all honesty. Anyways, how has your day been, mine has been fine. Oh, you want to get this upgrade? Well, don't let me keep you waiting! Alright, I don't understand why you're still reading this, I thought you wanted to get this upgrade, don't you wanna see a bunch of numbers going up faster? To be fair, I guess flavor text does make things a bit more appealing, so I guess I do understand why you're still reading this, but this specific upgrade doesn't even have good flavor text, I'm just rambling about something so random. OK, OK, I'm leaving, sheesh.
+        desc:Everything is <b>0.017%</b> more efficient per Autoclicker. Autoclickers are <b>17 times</b> as efficient.<//><q>Here we see Worker #955 getting ready to make her launch to... somewhere. Where is that somewhere? I have no idea. I hope she comes back with something, like candy. I'm starting to have my doubts in all honesty. Anyways, how has your day been, mine has been fine. Oh, you want to get this upgrade? Well, don't let me keep you waiting! Alright, I don't understand why you're still reading this, I thought you wanted to get this upgrade, don't you wanna see a bunch of numbers going up faster? To be fair, I guess flavor text does make things a bit more appealing, so I guess I do understand why you're still reading this, but this specific upgrade doesn't even have good flavor text, I'm just rambling about something so random. OK, OK, I'm leaving, sheesh.</q>
         cost:7.23987285e46 candy, 7.23987289e36 toxic, 122067000 anti
         passive:multiply candy yield of click by (1+((autoclick)*0.00017))
         passive:multiply toxic yield of click by (1+((autoclick)*0.00017))
@@ -1057,7 +1057,7 @@ Upgrades
         req:40 network
         
     *networkclick2
-        name:eggs for ages
+        name:Autoclickers
         desc:Toxic candy clicking is <b>0.27%</b> more efficient per Candynet.<//><q>Oh geez, we're going meta now?</q>
         cost:4.62459375e16 toxic
         passive:multiply toxic yield of click (1+((network)*0.0027))
