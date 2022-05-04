@@ -1409,7 +1409,7 @@ Upgrades
         
     *network6
         name:Intellectual Trolling
-        desc:Candynets are <b>5 times</b> as efficient.<//><q>We do a lil' calculatin', then we do a lil' thinkin', then we do a lil' trollin'.</q>
+        desc:Candynets are <b>5 times</b> as efficient.<//><q>We do a lil calculatin, then we do a lil thinkin, then we do a lil trollin.</q>
         cost:42525000000 toxic
         passive:multiply yield of network by 5
         tag:upgrade
