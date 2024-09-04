@@ -5,6 +5,8 @@ Let's make a game!
     created:17/4/2022
     updated:17/4/2022
     version:1
+
+// CODE TO PLAY: https://orteil.dashnet.org/igm/?g=4yCUiUKF
     
 Settings
     background:https://www.xmple.com/wallpaper/green-one-colour-solid-color-single-plain-512x512-c-b5f6a5-f-24.svg
